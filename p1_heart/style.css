@@ -1,15 +1,18 @@
+:root {
+  --size: 320px;
+}
 .heart {
   background: red;
-  width: 320px;
-  height: 320px;
+  width: var(--size);
+  height: var(--size);
   transform: rotate(45deg);
-  margin: 160px auto 0;
+  margin: calc(var(--size) / 2) auto 0;
 }
 .heart::before,
 .heart::after {
-  width: 320px;
-  height: 320px;
-  border-radius: 160px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   background: red;
   position: absolute;
   content: "";
@@ -17,9 +20,9 @@
 
 .heart::before {
   top: 0;
-  left: -160px;
+  left: -50%;
 }
 .heart::after {
-  top: -160px;
+  top: -50%;
   right: 0;
 }
