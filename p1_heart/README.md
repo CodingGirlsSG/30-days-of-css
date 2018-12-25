@@ -102,3 +102,9 @@ What will `p::first-letter` select? The "H" in the content of the sentence, or t
 ### `position: absolute` -> css positions
 
 Work in Progress
+
+## Day 2
+
+- reusing values using percentage
+- inherit background ( and beyond )
+- defining variables with css `var`
