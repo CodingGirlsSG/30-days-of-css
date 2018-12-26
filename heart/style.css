@@ -1,0 +1,52 @@
+:root {
+  --size: 400px;
+  --border: 7px;
+  --color: #ed5d52;
+  --border-color: rgba(255, 0, 0, 0.2);
+}
+.heart__wrapper {
+  background: var(--color);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  margin: 240px auto 0;
+}
+.heart {
+  top: 40%;
+  left: 35%;
+  width: 30%;
+  height: 30%;
+  background: white;
+  transform: rotate(45deg);
+  box-shadow: rgba(currentColor, 0.4) 2px 2px 5px 0;
+  position: relative;
+  border-bottom-right-radius: 5px;
+  animation: breathing 5s infinite;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 0;
+}
+
+.heart:before,
+.heart:after {
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart:before {
+  top: -50%;
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.2) -2px -2px 1px 0;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+.heart:after {
+  top: 0px;
+  left: -50%;
+  box-shadow: rgba(0, 0, 0, 0.2) -2px -2px 1px 0;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
