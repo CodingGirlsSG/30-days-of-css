@@ -1,0 +1,50 @@
+:root {
+  --width: 630px;
+  --height: 250px;
+  --border-radius: 40px;
+  --gap: 40px;
+}
+
+.nintendo-left,
+.nintendo-right {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  position: absolute;
+}
+.nintendo-left {
+  background: #03b9e2;
+  left: calc(-1 * var(--gap));
+  top: -5px;
+}
+.nintendo-right {
+  background: #fe4b3c;
+  right: calc(-1 * var(--gap));
+  bottom: -5px;
+}
+.nintendo {
+  position: relative;
+  margin: 20px auto;
+  width: var(--width);
+  height: var(--height);
+}
+.intersection-left {
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  left: calc(-1 * var(--gap));
+  height: calc(100%);
+  background: #191c30;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+.intersection-right {
+  overflow: hidden;
+  top: 5px;
+  width: calc(100% - var(--gap));
+  height: 100%;
+  position: relative;
+  right: calc(-1 * var(--gap));
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
