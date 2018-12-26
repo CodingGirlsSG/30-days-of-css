@@ -1,0 +1,38 @@
+:root {
+  --size: 160px;
+  --border: 7px;
+  --color: red;
+  --border-color: rgba(255, 0, 0, 0.2);
+}
+.heart {
+  background: var(--color);
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+  transform: rotate(45deg);
+  margin: 300px auto 0;
+  box-shadow: var(--border-color) var(--border) var(--border) 0 0;
+  border-bottom-right-radius: 10px;
+}
+.heart::before,
+.heart::after {
+  box-shadow: var(--border-color) 0 0 0 var(--border);
+  background-color: inherit;
+  position: absolute;
+  content: "";
+}
+
+.heart::before {
+  left: -50%;
+  height: var(--size);
+  width: calc(var(--size) / 2);
+  border-top-left-radius: calc(var(--size) / 2);
+  border-bottom-left-radius: calc(var(--size) / 2);
+}
+.heart::after {
+  top: -50%;
+  width: var(--size);
+  height: calc(var(--size) / 2);
+  border-top-left-radius: calc(var(--size) / 2);
+  border-top-right-radius: calc(var(--size) / 2);
+}
