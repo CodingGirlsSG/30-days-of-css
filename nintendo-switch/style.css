@@ -3,6 +3,49 @@
   --height: 250px;
   --border-radius: 40px;
   --gap: 40px;
+  --red: #fe4b3c;
+  --blue: #03b9e2;
+
+  --heart-size: 60px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.heart-wrapper {
+  position: relative;
+  width: var(--heart-size);
+  height: var(--heart-size);
+}
+.heart {
+  width: var(--heart-size);
+  height: var(--heart-size);
+  transform: rotate(45deg);
+  background: var(--red);
+  border-bottom-right-radius: calc(var(--heart-size) / 8);
+}
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  background: var(--red);
+}
+.heart::before {
+  left: -50%;
+}
+.heart::after {
+  top: -50%;
 }
 
 .nintendo-left,
@@ -13,12 +56,12 @@
   position: absolute;
 }
 .nintendo-left {
-  background: #03b9e2;
+  background: var(--blue);
   left: calc(-1 * var(--gap));
   top: -5px;
 }
 .nintendo-right {
-  background: #fe4b3c;
+  background: var(--red);
   right: calc(-1 * var(--gap));
   bottom: -5px;
 }
