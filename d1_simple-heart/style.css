@@ -1,0 +1,28 @@
+:root {
+  --size: 160px;
+  --color: red;
+  --border-color: rgba(255, 0, 0, 0.2);
+}
+.heart {
+  background: var(--color);
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+  transform: rotate(45deg);
+  margin: 300px auto 0;
+}
+.heart::before,
+.heart::after {
+  width: var(--size);
+  height: var(--size);
+  background-color: inherit;
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+}
+.heart::before {
+  left: -50%;
+}
+.heart::after {
+  top: -50%;
+}

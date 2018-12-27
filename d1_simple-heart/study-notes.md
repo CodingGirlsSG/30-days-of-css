@@ -2,10 +2,6 @@
 
 ## Day 1: Heart Shape
 
-```
-git checkout w1d1-heart-shape
-```
-
 Objective: Draw a heart on the screen.
 
 [//]: <> " Add tutorial link here "
