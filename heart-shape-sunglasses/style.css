@@ -15,11 +15,9 @@
   );
 }
 .gallery {
-  /* background: radial-gradient(var(--background-light), var(--background)); */
   background: var(--background-light);
   box-shadow: inset var(--background) 0 0 100px 20px,
     var(--background) 0 12px 12px -10px;
-  /* box-shadow: var(--background-light) 5px 5px 1px 0; */
   width: var(--canvas-size);
   height: calc(var(--canvas-size) * 0.7);
   margin: 40px auto;
@@ -41,8 +39,6 @@
   position: relative;
   border-radius: 50%;
   border: var(--stroke-width) solid var(--color);
-  /* transform: rotate(45deg); */
-  /* border-bottom-right-radius: 10px; */
 }
 .heart:first-child {
   margin-right: 20px;
@@ -56,20 +52,3 @@
   transform: rotate(90deg);
   box-shadow: var(--background) 4px -4px 4px -4px;
 }
-/* .heart::before,
-.heart::after {
-  background-color: inherit;
-  background-image: inherit;
-  position: absolute;
-  content: "";
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-}
-
-.heart::before {
-  left: -50%;
-}
-.heart::after {
-  top: -50%;
-} */
