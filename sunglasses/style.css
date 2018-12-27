@@ -1,0 +1,33 @@
+.sunglasses-wrapper {
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.one-glass {
+  width: 70px;
+  height: 35px;
+  background: black;
+  background-image: linear-gradient(
+    105deg,
+    black 0,
+    black 60%,
+    white 0,
+    white 70%,
+    black 0,
+    black 100%
+  );
+  border-radius: 15% / 22%;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  position: relative;
+}
+
+.nose {
+  width: 10px;
+  height: 5px;
+  background: black;
+  border-radius: 5% / 50%;
+  top: 5px;
+  position: relative;
+}
