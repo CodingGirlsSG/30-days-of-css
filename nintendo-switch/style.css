@@ -9,6 +9,9 @@
 
   --heart-size: 60px;
   --button-size: 45px;
+  --minor-size: 19px;
+  --left-extra-button-size: 17px;
+  --right-extra-button-size: 21px;
 }
 
 .container {
@@ -107,5 +110,46 @@
 }
 .nintendo-right > .major-button {
   right: 20px;
-  top: 95px;
+  top: 105px;
+}
+
+.minor-buttons {
+  width: var(--minor-size);
+  height: var(--minor-size);
+  background: var(--dark);
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: var(--dark) var(--minor-size) var(--minor-size) 0 0,
+    var(--dark) calc(var(--minor-size) * -1) var(--minor-size) 0 0,
+    var(--dark) 0 calc(var(--minor-size) * 2) 0 0;
+}
+
+.nintendo-right > .minor-buttons {
+  right: 32px;
+  top: 30px;
+}
+
+.nintendo-left > .minor-buttons {
+  top: 110px;
+  left: 32px;
+}
+
+.extra-button {
+  background: var(--dark);
+  position: absolute;
+}
+.nintendo-left > .extra-button {
+  width: var(--left-extra-button-size);
+  height: var(--left-extra-button-size);
+  border-radius: 4px;
+  left: 52px;
+  top: 180px;
+}
+
+.nintendo-right > .extra-button {
+  width: var(--right-extra-button-size);
+  height: var(--right-extra-button-size);
+  border-radius: 50%;
+  right: 49px;
+  top: 170px;
 }
