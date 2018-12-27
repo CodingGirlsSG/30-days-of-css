@@ -42,21 +42,6 @@
   width: var(--heart-size);
   height: var(--heart-size);
 }
-.heart::before,
-.heart::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  position: absolute;
-  background: var(--red);
-}
-.heart::before {
-  left: -50%;
-}
-.heart::after {
-  top: -50%;
-}
 
 .nintendo-left,
 .nintendo-right {
