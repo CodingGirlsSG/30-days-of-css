@@ -1,17 +1,21 @@
 :root {
-  --width: 630px;
-  --height: 250px;
+  --width: 610px;
+  --height: 270px;
   --border-radius: 40px;
-  --gap: 40px;
+  --gap: 45px;
   --red: #fe4b3c;
   --blue: #03b9e2;
   --dark: #191c30;
 
-  --heart-size: 110px;
-  --button-size: 45px;
-  --minor-size: 19px;
+  --heart-size: 120px;
+  --major-size: 45px;
+  --major-button-position-horizontal: 25px;
+  --minor-size: 21px;
+  --minor-button-position: 35px;
   --left-extra-button-size: 17px;
   --right-extra-button-size: 21px;
+  --extra-button-position-horizontal: 60px;
+  --extra-button-position-vertical: 175px;
   --minus-length: 17px;
   --minus-thick: 6px;
   --minus-radius: 2px;
@@ -73,7 +77,7 @@
 }
 .nintendo {
   position: relative;
-  margin: 20px auto;
+  margin: 40px auto;
   width: var(--width);
   height: var(--height);
 }
@@ -100,18 +104,19 @@
 
 .major-button {
   border-radius: 50%;
-  width: var(--button-size);
-  height: var(--button-size);
+  box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 0 1px;
+  width: var(--major-size);
+  height: var(--major-size);
   background: var(--dark);
   position: absolute;
 }
 .nintendo-left > .major-button {
-  top: 40px;
-  left: 20px;
+  top: 45px;
+  left: var(--major-button-position-horizontal);
 }
 .nintendo-right > .major-button {
-  right: 20px;
-  top: 105px;
+  right: var(--major-button-position-horizontal);
+  top: 115px;
 }
 
 .minor-buttons {
@@ -126,13 +131,13 @@
 }
 
 .nintendo-right > .minor-buttons {
-  right: 32px;
+  right: var(--minor-button-position);
   top: 30px;
 }
 
 .nintendo-left > .minor-buttons {
   top: 110px;
-  left: 32px;
+  left: var(--minor-button-position);
 }
 
 .extra-button {
@@ -143,16 +148,16 @@
   width: var(--left-extra-button-size);
   height: var(--left-extra-button-size);
   border-radius: 4px;
-  left: 52px;
-  top: 180px;
+  left: var(--extra-button-position-horizontal);
+  top: calc(var(--extra-button-position-vertical) + 10px);
 }
 
 .nintendo-right > .extra-button {
   width: var(--right-extra-button-size);
   height: var(--right-extra-button-size);
   border-radius: 50%;
-  right: 49px;
-  top: 170px;
+  right: var(--extra-button-position-horizontal);
+  top: calc(var(--extra-button-position-vertical));
 }
 
 .minus-button {
@@ -163,12 +168,12 @@
   background: var(--dark);
 }
 .nintendo-left > .minus-button {
-  left: 62px;
-  top: 20px;
+  left: 66px;
+  top: 25px;
 }
 
 .nintendo-right > .plus-button {
-  right: 76px;
+  right: 85px;
   top: 17px;
   position: absolute;
 }
