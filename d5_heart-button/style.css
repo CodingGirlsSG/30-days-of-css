@@ -1,0 +1,69 @@
+:root {
+  --pink: #ec4989;
+  --dark-pink: #a12355;
+  --light-grey: #f3f3f3;
+  --dark-grey: #cecece;
+  --button-width: 150px;
+  --button-height: 125px;
+  --heart-size: 40px;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  width: var(--button-width);
+  height: var(--button-height);
+  border-radius: 15px;
+  background: var(--light-grey);
+  box-shadow: var(--dark-grey) 0 15px 0 0;
+  border: 0;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease-in;
+}
+.button:active {
+  background: var(--pink);
+  box-shadow: var(--dark-pink) 0 5px 0 0;
+  transform: translateY(10px);
+}
+
+.heart {
+  width: var(--heart-size);
+  height: var(--heart-size);
+  transform: rotate(45deg);
+  background: var(--dark-grey);
+  top: 5px;
+  position: relative;
+  display: flex;
+  transition: 0.2s ease-in;
+}
+.button:hover > .heart {
+  background: var(--pink);
+}
+.button:active > .heart {
+  background: white;
+}
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  position: absolute;
+}
+.heart::before {
+  left: -50%;
+}
+.heart::after {
+  top: -50%;
+}
