@@ -12,6 +12,9 @@
   --minor-size: 19px;
   --left-extra-button-size: 17px;
   --right-extra-button-size: 21px;
+  --minus-length: 17px;
+  --minus-thick: 6px;
+  --minus-radius: 2px;
 }
 
 .container {
@@ -152,4 +155,25 @@
   border-radius: 50%;
   right: 49px;
   top: 170px;
+}
+
+.minus-button {
+  width: var(--minus-length);
+  height: var(--minus-thick);
+  border-radius: var(--minus-radius);
+  position: absolute;
+  background: var(--dark);
+}
+.nintendo-left > .minus-button {
+  left: 62px;
+  top: 20px;
+}
+
+.nintendo-right > .plus-button {
+  right: 76px;
+  top: 17px;
+  position: absolute;
+}
+.nintendo-right > .plus-button > .minus-button:nth-child(2) {
+  transform: rotate(90deg);
 }
