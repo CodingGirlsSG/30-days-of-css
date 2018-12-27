@@ -1,7 +1,42 @@
+:root {
+  --size: 160px;
+  --border: 7px;
+  --color: red;
+  --border-color: rgba(255, 0, 0, 0.2);
+}
+.heart {
+  background: var(--color);
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+  transform: rotate(45deg);
+  margin: 300px auto 0;
+  border-bottom-right-radius: 10px;
+}
+.heart::before,
+.heart::after {
+  background-color: inherit;
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.heart::before {
+  left: -50%;
+}
+.heart::after {
+  top: -50%;
+}
+
 .sunglasses-wrapper {
   margin: 40px auto;
   display: flex;
   justify-content: center;
+  z-index: 10;
+  position: absolute;
+  transform: rotate(-29deg) scale(1.2) translateY(-21px);
 }
 
 .one-glass {
