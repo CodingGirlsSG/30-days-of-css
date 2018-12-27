@@ -5,8 +5,10 @@
   --gap: 40px;
   --red: #fe4b3c;
   --blue: #03b9e2;
+  --dark: #191c30;
 
   --heart-size: 60px;
+  --button-size: 45px;
 }
 
 .container {
@@ -77,7 +79,7 @@
   width: 100%;
   left: calc(-1 * var(--gap));
   height: calc(100%);
-  background: #191c30;
+  background: var(--dark);
   border-top-right-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
 }
@@ -90,4 +92,20 @@
   right: calc(-1 * var(--gap));
   border-top-left-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
+}
+
+.major-button {
+  border-radius: 50%;
+  width: var(--button-size);
+  height: var(--button-size);
+  background: var(--dark);
+  position: absolute;
+}
+.nintendo-left > .major-button {
+  top: 40px;
+  left: 20px;
+}
+.nintendo-right > .major-button {
+  right: 20px;
+  top: 95px;
 }
