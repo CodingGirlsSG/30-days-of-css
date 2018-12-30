@@ -1,0 +1,64 @@
+@import "../common.css";
+:root {
+  --canvas-size: 200px;
+  --shadow-size: 5px;
+  --grid-gap: 4px;
+  --inset-shadow: inset var(--shadow-nothing) 0 0 40px 10px;
+  --gallery-shadow: var(--shadow-low) 0 var(--shadow-size)
+    calc(1.5 * var(--shadow-size)) calc(-0.8 * var(--shadow-size));
+  --paper-shadow: rgba(255, 255, 255, 0.4) 4px 4px 0 0;
+  --char: \u2500 - \u257f;
+}
+
+.gallery {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(173, 216, 230, 0.7);
+}
+
+.canvas {
+  width: var(--canvas-size);
+  height: var(--canvas-size);
+  border-radius: 1px;
+  padding: 5px;
+  background: white;
+  border: 1px solid white;
+  box-shadow: var(--paper-shadow);
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-gap: var(--grid-gap);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(calc(var(--canvas-size) / 5 - var(--grid-gap)), 1fr)
+  );
+  grid-template-rows: repeat(
+    auto-fit,
+    minmax(calc(var(--canvas-size) / 5 - var(--grid-gap)), 1fr)
+  );
+}
+
+.grid-item {
+  background: lightblue;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item::before {
+  content: "\27d4";
+  font-size: 6em;
+  color: rgba(255, 255, 255, 0.5);
+  top: -46px;
+  left: -7px;
+  position: absolute;
+}
