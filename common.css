@@ -1,0 +1,10 @@
+:root {
+  --shadow-high: #777;
+  --shadow-low: #aaa;
+  --shadow-nothing: #eee;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
