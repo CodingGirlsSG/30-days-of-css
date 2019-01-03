@@ -2,6 +2,9 @@
 :root {
   --size: 40px;
 }
+body {
+  color: white;
+}
 
 .generated-background {
   width: 100vw;
