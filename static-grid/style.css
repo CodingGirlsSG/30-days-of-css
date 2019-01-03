@@ -1,0 +1,103 @@
+:root {
+  --dark: #282828;
+  --light-grey: rgb(240, 240, 239);
+  --grey: #cfcfcf;
+  --brown: #635547;
+  --highlight: #fcfcfc;
+  --red: #b64b3e;
+  --green: #1f9665;
+  --blue: #3c3fa0;
+  --casing-size: 40px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background: white;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  color: white;
+  transform: rotate(-180deg);
+  writing-mode: tb;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.outer-grid {
+  display: grid;
+  width: 800px;
+  height: 600px;
+  grid-template-areas:
+    "left top-right"
+    "left bottom-right";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr 3fr;
+}
+
+.left {
+  background: var(--dark);
+  grid-area: left;
+  display: grid;
+  grid-template-areas:
+    ". ."
+    ". content"
+    ". .";
+  grid-template-columns: var(--casing-size) 1fr;
+  grid-template-rows: var(--casing-size) 1fr var(--casing-size);
+}
+
+.main {
+  grid-area: content;
+  background: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main > h1 {
+  font-size: 6rem;
+}
+
+.top-right {
+  grid-area: top-right;
+  background: var(--light-grey);
+  display: grid;
+  grid-template-areas:
+    ". ."
+    "secondary .";
+  grid-template-columns: 1fr var(--casing-size);
+  grid-template-rows: var(--casing-size) 1fr;
+}
+
+.secondary {
+  grid-area: secondary;
+  background: var(--brown);
+  position: relative;
+}
+.secondary > h2 {
+  padding: 0;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.bottom-right {
+  grid-area: bottom-right;
+  background: var(--grey);
+  display: grid;
+  grid-template-areas:
+    "highlight ."
+    ". .";
+  grid-template-columns: 1fr var(--casing-size);
+  grid-template-rows: 1fr var(--casing-size);
+}
+
+.highlight {
+  background: var(--highlight);
+}
