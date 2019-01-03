@@ -2,6 +2,7 @@
   --shadow-high: #777;
   --shadow-low: #aaa;
   --shadow-nothing: #eee;
+  --canvas-size: 200px;
 }
 
 body {

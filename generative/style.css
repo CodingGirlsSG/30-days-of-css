@@ -1,6 +1,5 @@
 @import "../common.css";
 :root {
-  --canvas-size: 200px;
   --shadow-size: 5px;
   --grid-gap: 4px;
   --inset-shadow: inset var(--shadow-nothing) 0 0 40px 10px;
