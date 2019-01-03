@@ -1,0 +1,62 @@
+@import "../common.css";
+
+:root {
+  --offset: 7%;
+  --column-track: minmax(14rem, 1fr);
+  --row-track: minmax(20rem, 1fr);
+  --background: "#f9f8eb";
+}
+
+.grid {
+  overflow: hidden;
+  display: grid;
+  padding: 0 3rem;
+  grid-gap: 3rem;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(
+    auto-fill,
+    var(--column-track) var(--column-track)
+  );
+  grid-template-rows: repeat(auto-fill, var(--row-track));
+  background: var(--background);
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px 0;
+  position: relative;
+  background: currentColor;
+  padding: 1rem 2rem;
+}
+
+.card:nth-child(2n + 1) {
+  top: var(--offset);
+}
+
+.card:nth-child(2n) {
+  top: calc(-1 * var(--offset));
+}
+
+.card > h1 {
+  font-family: "Arial";
+  color: white;
+}
+.card > h1:first-letter {
+  text-transform: uppercase;
+}
+
+.card > button {
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  outline: none;
+  border: 0;
+  color: inherit;
+  font-size: 1rem;
+  font-family: "arial black";
+  position: absolute;
+  bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px 0;
+}
