@@ -4,7 +4,7 @@
   --offset: 7%;
   --column-track: minmax(14rem, 1fr);
   --row-track: minmax(20rem, 1fr);
-  --background: "#f9f8eb";
+  --background: #e8eaeb;
 }
 
 .grid {
@@ -58,5 +58,5 @@
   font-family: "arial black";
   position: absolute;
   bottom: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px 0;
 }
