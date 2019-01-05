@@ -8,6 +8,7 @@
   --green: #1f9665;
   --blue: #3c3fa0;
   --casing-size: 40px;
+  --decor-size: 45px;
 }
 
 body {
@@ -86,6 +87,17 @@ h2 {
   bottom: 1rem;
   right: 1rem;
 }
+.decor {
+  width: var(--decor-size);
+  height: var(--decor-size);
+  border-radius: 50%;
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  background: var(--highlight);
+  box-shadow: var(--highlight) 0 calc(-1 * (10px + var(--decor-size))) 0 0,
+    var(--highlight) 0 calc(-2 * (10px + var(--decor-size))) 0 0;
+}
 
 .bottom-right {
   grid-area: bottom-right;
@@ -100,4 +112,40 @@ h2 {
 
 .highlight {
   background: var(--highlight);
+  display: grid;
+  grid-template-areas:
+    "content content"
+    "prev next";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5fr 2fr;
+}
+.content {
+  grid-area: content;
+}
+.prev::before,
+.next::before {
+  position: absolute;
+  top: 70%;
+  font-family: sans-serif;
+  font-size: 6px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+.prev {
+  grid-area: prev;
+  background: var(--highlight);
+  position: relative;
+}
+.prev::before {
+  content: "prev";
+  left: 20%;
+}
+.next {
+  grid-area: next;
+  background: var(--light-grey);
+  position: relative;
+}
+.next::before {
+  content: "next";
+  right: 20%;
 }
