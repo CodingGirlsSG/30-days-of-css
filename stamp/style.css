@@ -1,0 +1,63 @@
+:root {
+  --background: #ff6f30;
+  --size: 400px;
+  --stamp-edge-size: calc(var(--size) / 8 / 4);
+  --shadow-size: 6px;
+  --shadow-color: #813413;
+}
+body {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+}
+.stamp {
+  width: var(--size);
+  height: var(--size);
+  color: var(--background);
+  position: relative;
+  background-color: white;
+  color: white;
+  filter: drop-shadow(
+    var(--shadow-color) var(--shadow-size) var(--shadow-size)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stamp::before,
+.stamp::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-image: radial-gradient(
+    transparent 0,
+    transparent var(--stamp-edge-size),
+    currentColor var(--stamp-edge-size),
+    currentColor calc(2 * var(--stamp-edge-size))
+      /* currentColor 0,
+    currentColor var(--stamp-edge-size),
+    transparent var(--stamp-edge-size),
+    transparent calc(2 * var(--stamp-edge-size)) */
+  );
+  background-size: calc(4 * var(--stamp-edge-size))
+    calc(4 * var(--stamp-edge-size));
+  background-position: calc(-1 * var(--stamp-edge-size))
+    calc(-2 * var(--stamp-edge-size));
+  z-index: 1;
+  width: var(--stamp-edge-size);
+  color: currentColor;
+}
+
+.stamp::before {
+  left: calc(-1 * var(--stamp-edge-size));
+  transform: rotate(180deg);
+}
+.stamp::after {
+  right: calc(-1 * var(--stamp-edge-size));
+}
+
+.inner {
+}
