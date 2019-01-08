@@ -6,6 +6,8 @@
   --shadow-color: #f9b131;
 }
 body {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   padding: 0;
   margin: 0;
