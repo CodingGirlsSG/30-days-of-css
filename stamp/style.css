@@ -1,9 +1,9 @@
 :root {
-  --background: #ff6f30;
+  --bg-color: #084897;
   --size: 400px;
-  --stamp-edge-size: calc(var(--size) / 8 / 4);
+  --cut-size: calc(var(--size) / 8);
   --shadow-size: 6px;
-  --shadow-color: #813413;
+  --shadow-color: #f9b131;
 }
 body {
   display: flex;
@@ -11,53 +11,36 @@ body {
   margin: 0;
   align-items: center;
   justify-content: center;
-  background: var(--background);
+  background: var(--bg-color);
 }
 .stamp {
   width: var(--size);
   height: var(--size);
-  color: var(--background);
   position: relative;
   background-color: white;
   color: white;
-  filter: drop-shadow(
-    var(--shadow-color) var(--shadow-size) var(--shadow-size)
-  );
+  filter: drop-shadow(var(--shadow-color) var(--shadow-size) var(--shadow-size))
+    drop-shadow(#444 0 0 20px);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.stamp::before,
-.stamp::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  background-image: radial-gradient(
-    transparent 0,
-    transparent var(--stamp-edge-size),
-    currentColor var(--stamp-edge-size),
-    currentColor calc(2 * var(--stamp-edge-size))
-      /* currentColor 0,
-    currentColor var(--stamp-edge-size),
-    transparent var(--stamp-edge-size),
-    transparent calc(2 * var(--stamp-edge-size)) */
-  );
-  background-size: calc(4 * var(--stamp-edge-size))
-    calc(4 * var(--stamp-edge-size));
-  background-position: calc(-1 * var(--stamp-edge-size))
-    calc(-2 * var(--stamp-edge-size));
-  z-index: 1;
-  width: var(--stamp-edge-size);
-  color: currentColor;
-}
 
-.stamp::before {
-  left: calc(-1 * var(--stamp-edge-size));
-  transform: rotate(180deg);
-}
-.stamp::after {
-  right: calc(-1 * var(--stamp-edge-size));
+  background: radial-gradient(
+        transparent 0,
+        transparent 50%,
+        white 50%,
+        white 100%
+      )
+      calc(-0.5 * var(--cut-size)) calc(-0.5 * var(--cut-size)) /
+      var(--cut-size) var(--cut-size),
+    linear-gradient(0deg, white 0, white 100%) center center /
+      calc(var(--size) - var(--cut-size)) calc(var(--size) - var(--cut-size))
+      no-repeat;
 }
 
 .inner {
+  background: url(https://avatars1.githubusercontent.com/u/16744126?s=200&v=4)
+    bottom right no-repeat;
+  width: calc(100% - 1.5 * var(--cut-size));
+  height: calc(100% - 1.5 * var(--cut-size));
 }
