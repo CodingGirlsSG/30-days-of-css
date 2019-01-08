@@ -1,12 +1,12 @@
 :root {
-  --bg-color: #084897;
-  --hl-color: white;
   --w: 400px;
   --h: 400px;
   --cut-size: calc(var(--w) / 8);
   --shadow-size: 6px;
-  --shadow-color: #f9b131;
-  --img-url: url(https://avatars1.githubusercontent.com/u/16744126?s=200&v=4);
+  --shadow-color: #ffa4b1;
+  --bg-color: #86abff;
+  --hl-color: #eef2fe;
+  --img-url: url(https://cdn.dribbble.com/users/295355/screenshots/3314912/gameboyv3.jpg);
 }
 body {
   display: flex;
@@ -21,8 +21,9 @@ body {
   height: var(--h);
   position: relative;
   background-color: var(--hl-color);
-  filter: drop-shadow(var(--shadow-color) var(--shadow-size) var(--shadow-size))
-    drop-shadow(#444 0 0 20px);
+  filter: drop-shadow(
+    var(--shadow-color) var(--shadow-size) var(--shadow-size)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,7 +42,8 @@ body {
 }
 
 .inner {
-  background: var(--img-url) bottom right no-repeat;
+  background: var(--img-url) center no-repeat;
+  background-size: cover;
   width: calc(100% - 1.5 * var(--cut-size));
   height: calc(100% - 1.5 * var(--cut-size));
 }
