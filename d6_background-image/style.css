@@ -1,6 +1,9 @@
 @import "../common.css";
 :root {
   --size: 40px;
+  --step: 4px;
+  --highlight: white;
+  --inverse: currentColor;
 }
 body {
   color: white;
@@ -16,25 +19,252 @@ body {
   transition: all linear 0.1s;
 }
 
-.left {
-  grid-area: left;
+.left,
+.right {
   background-image: repeating-radial-gradient(
-    circle at 100%,
-    white 0,
-    white var(--size),
-    currentColor 0,
-    currentColor calc(2 * var(--size))
+    circle at var(--origin),
+    var(--inverse) 0,
+    var(--inverse) var(--size),
+    var(--highlight) 0,
+    var(--highlight) calc(2 * var(--size))
   );
+  animation: water linear 1.8s infinite;
+  animation-fill-mode: forwards;
+  cursor: default;
+}
+
+.left {
+  --highlight: currentColor;
+  --inverse: white;
+  --origin: 100%;
+  grid-area: left;
 }
 .right {
+  --origin: 0;
   grid-area: right;
-  background-image: repeating-radial-gradient(
-    circle at 0,
-    currentColor 0,
-    currentColor var(--size),
-    white 0,
-    white calc(2 * var(--size))
-  );
+}
+
+@keyframes water {
+  5% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--highlight) 0,
+      var(--highlight) calc(var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(var(--size) + var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(2 * var(--size))
+    );
+  }
+  10% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--highlight) 0,
+      var(--highlight) calc(2 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(var(--size) + 2 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(2 * var(--size))
+    );
+  }
+  15% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--highlight) 0,
+      var(--highlight) calc(3 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(var(--size) + 3 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(2 * var(--size))
+    );
+  }
+  20% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--highlight) 0,
+      var(--highlight) calc(4 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(var(--size) + 4 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(2 * var(--size))
+    );
+  }
+  25% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--highlight) 0,
+      var(--highlight) calc(5 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(var(--size) + 5 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(2 * var(--size))
+    );
+  }
+  30% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--highlight) 0,
+      var(--highlight) calc(6 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(var(--size) + 6 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(2 * var(--size))
+    );
+  }
+  35% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--highlight) 0,
+      var(--highlight) calc(7 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(var(--size) + 7 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(2 * var(--size))
+    );
+  }
+  40% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--highlight) 0,
+      var(--highlight) calc(8 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(var(--size) + 8 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(2 * var(--size))
+    );
+  }
+  45% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--highlight) 0,
+      var(--highlight) calc(9 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(var(--size) + 9 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(2 * var(--size))
+    );
+  }
+  50% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--highlight) 0,
+      var(--highlight) calc(10 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(var(--size) + 10 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(2 * var(--size))
+    );
+  }
+  55% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--inverse) 0,
+      var(--inverse) calc(1 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(var(--size) + 1 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(2 * var(--size))
+    );
+  }
+  60% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--inverse) 0,
+      var(--inverse) calc(2 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(var(--size) + 2 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(2 * var(--size))
+    );
+  }
+  65% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--inverse) 0,
+      var(--inverse) calc(3 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(var(--size) + 3 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(2 * var(--size))
+    );
+  }
+  70% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--inverse) 0,
+      var(--inverse) calc(4 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(var(--size) + 4 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(2 * var(--size))
+    );
+  }
+  75% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--inverse) 0,
+      var(--inverse) calc(5 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(var(--size) + 5 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(2 * var(--size))
+    );
+  }
+  80% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--inverse) 0,
+      var(--inverse) calc(6 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(var(--size) + 6 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(2 * var(--size))
+    );
+  }
+  85% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--inverse) 0,
+      var(--inverse) calc(7 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(var(--size) + 7 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(2 * var(--size))
+    );
+  }
+  90% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--inverse) 0,
+      var(--inverse) calc(8 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(var(--size) + 8 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(2 * var(--size))
+    );
+  }
+  95% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--inverse) 0,
+      var(--inverse) calc(9 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(var(--size) + 9 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(2 * var(--size))
+    );
+  }
+  100% {
+    background-image: repeating-radial-gradient(
+      circle at var(--origin),
+      var(--inverse) 0,
+      var(--inverse) calc(10 * var(--step)),
+      var(--highlight) 0,
+      var(--highlight) calc(var(--size) + 10 * var(--step)),
+      var(--inverse) 0,
+      var(--inverse) calc(2 * var(--size))
+    );
+  }
 }
 
 .text {
@@ -49,13 +279,15 @@ h1 {
   color: black;
   width: 10ch;
   text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 0;
+  cursor: default;
 }
 
 a {
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  color: currentColor;
+  color: var(--inverse);
   background: rgba(255, 255, 255, 0.7);
   padding: 5px;
   box-shadow: rgba(255, 255, 255, 0.2) 2px 2px 0 0;
+  cursor: pointer;
 }
