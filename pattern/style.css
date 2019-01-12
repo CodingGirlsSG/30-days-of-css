@@ -1,0 +1,75 @@
+@import "../common.css";
+:root {
+  --bg-color: white;
+  --canvas-size: 15vw;
+  --stroke: 3px;
+  --stroke-color: #e8c7be;
+  --wafu-color: #80322e;
+  --wafu-shadow-color: #59040a;
+}
+
+.gallery {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color);
+}
+.grid {
+  position: relative;
+  margin: 0 auto;
+  width: 80vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, calc(var(--canvas-size) * 0.72));
+  grid-template-rows: repeat(auto-fill, calc(var(--canvas-size) * 0.25 * 0.85));
+  overflow: hidden;
+}
+
+.one {
+  position: relative;
+  height: calc(var(--canvas-size) / 2);
+  width: var(--canvas-size);
+  background-image: radial-gradient(
+    circle at bottom,
+    var(--wafu-color) 0,
+    var(--wafu-color) calc(30% - var(--stroke)),
+    var(--stroke-color) 0,
+    var(--stroke-color) 30%,
+    var(--wafu-color) 0,
+    var(--wafu-color) calc(45% - var(--stroke)),
+    var(--stroke-color) 0,
+    var(--stroke-color) 45%,
+    var(--wafu-color) 0,
+    var(--wafu-color) calc(60% - var(--stroke)),
+    var(--stroke-color) 0,
+    var(--stroke-color) 60%,
+    transparent 0
+  );
+  background-size: var(--canvas-size);
+  background-repeat: no-repeat;
+  grid-auto-flow: column;
+}
+.one:nth-of-type(12n),
+.one:nth-of-type(12n - 1),
+.one:nth-of-type(12n - 2),
+.one:nth-of-type(12n - 3),
+.one:nth-of-type(12n - 4),
+.one:nth-of-type(12n - 5) {
+  left: calc(var(--canvas-size) * 0.75 / 2);
+}
+
+.mask {
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+    circle at center,
+    transparent 0,
+    transparent 40%,
+    white 0
+  );
+  position: absolute;
+  filter: drop-shadow(var(--wafu-shadow-color) 0 0 10px);
+}
