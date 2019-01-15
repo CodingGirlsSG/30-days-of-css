@@ -1,0 +1,85 @@
+/** original design https://dribbble.com/shots/4941238-One-Minimal-Festival-Homepage-Alternative-Version-Animation */
+:root {
+  font-size: 16px;
+  font-family: Futura;
+  --bg-color: #010101;
+  --w: 370px;
+  --h: 450px;
+  --gap: 2rem;
+  --c1-color: #f8a3bc;
+  --c2-color: #fec2d4;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card,
+.shade-1,
+.shade-2 {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+.card {
+  position: relative;
+  max-width: var(--w);
+  color: white;
+  animation: flying 4s cubic-bezier(0.81, 0.01, 0.22, 1) infinite;
+  margin-top: -200px;
+}
+.card .wrapper {
+  padding: 4rem 2rem;
+  background: var(--bg-color);
+}
+.card h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.card p {
+  font-weight: 200;
+  line-height: 2;
+}
+.dim {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4rem;
+}
+
+.shade-1,
+.shade-2 {
+  width: var(--w);
+  height: var(--h);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.shade-1 {
+  top: var(--gap);
+  left: var(--gap);
+  animation: flying 4s cubic-bezier(0.81, 0.01, 0.22, 1) infinite;
+  background: var(--c1-color);
+  z-index: -1;
+}
+.shade-2 {
+  top: calc(2 * var(--gap));
+  left: calc(2 * var(--gap));
+  animation: flying 4s ease-in-out infinite;
+  background: var(--c2-color);
+  z-index: -2;
+}
+
+@keyframes flying {
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  30%,
+  50% {
+    transform: translateY(1500px);
+  }
+  70%,
+  100% {
+    transform: translateY(0);
+  }
+}
