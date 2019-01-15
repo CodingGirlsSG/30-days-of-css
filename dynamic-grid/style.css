@@ -1,5 +1,3 @@
-@import "../common.css";
-
 :root {
   --offset: 7%;
   --column-track: minmax(14rem, 1fr);

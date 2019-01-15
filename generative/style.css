@@ -1,8 +1,9 @@
-@import "../common.css";
 :root {
   --shadow-size: 5px;
   --grid-gap: 4px;
   --inset-shadow: inset var(--shadow-nothing) 0 0 40px 10px;
+  --shadow-nothing: #eee;
+  --shadow-low: #aaa;
   --gallery-shadow: var(--shadow-low) 0 var(--shadow-size)
     calc(1.5 * var(--shadow-size)) calc(-0.8 * var(--shadow-size));
   --paper-shadow: rgba(255, 255, 255, 0.4) 4px 4px 0 0;
