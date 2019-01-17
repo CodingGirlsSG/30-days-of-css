@@ -1,0 +1,123 @@
+:root {
+  font-size: 16px;
+  font-family: futura;
+  --fg: #2d405e;
+  --bg: #1a2650;
+  --R: 6rem;
+  --w: 300px;
+  --r: calc(var(--w) / 10);
+  --img: url(https://theprojector.sg/wp-content/uploads/2018/10/The-Great-Wave-240x160.jpg);
+}
+body {
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ticket {
+  max-width: var(--w);
+  text-align: center;
+  position: relative;
+}
+.ticket::before,
+.ticket::after {
+  content: "";
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  box-shadow: var(--bg) 0 0 0 calc(var(--R) / 3.14);
+  border-radius: 50%;
+  top: -1px;
+}
+.ticket::before {
+  left: -1px;
+}
+.ticket::after {
+  right: -1px;
+}
+
+.top {
+  position: relative;
+  mix-blend-mode: darken;
+  background: var(--img) no-repeat;
+  background-size: 100%;
+  padding-top: calc(100% * 16 / 24);
+}
+.top img {
+  width: 100%;
+}
+.bottom {
+  background: white;
+  position: relative;
+  padding: 2rem 0 0;
+}
+.bottom::before,
+.detail::after {
+  content: "";
+  width: 100%;
+  height: var(--r);
+  background-image: radial-gradient(
+    circle at center,
+    var(--bg) 0,
+    var(--bg) 50%,
+    transparent 0
+  );
+  background-size: var(--r) var(--r);
+  background-position: calc(-0.5 * var(--r)) 0;
+  position: absolute;
+  left: 0;
+}
+.bottom::before {
+  top: calc(-0.5 * var(--r));
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--fg);
+  text-shadow: 4px 4px #eee5d7;
+}
+
+.detail {
+  padding: 0 1rem 2rem 1rem;
+  position: relative;
+  --r: 20px;
+}
+.detail::after {
+  bottom: calc(-0.5 * var(--r));
+}
+
+p {
+  font-family: Courier, monospace;
+  color: var(--fg);
+  text-align: left;
+  line-height: 1;
+}
+
+.datetime {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  background: #efefef;
+  background-image: radial-gradient(
+      circle at center,
+      var(--bg) 0,
+      var(--bg) 50%,
+      transparent 0
+    ),
+    radial-gradient(circle at center, var(--bg) 0, var(--bg) 50%, transparent 0),
+    var(--img);
+  background-size: var(--R) var(--R), var(--R) var(--R), cover;
+  background-position: bottom calc(-0.5 * var(--R)) left calc(-0.5 * var(--R)),
+    bottom calc(-0.5 * var(--R)) right calc(-0.5 * var(--R)), bottom;
+  background-repeat: no-repeat;
+  color: var(--fg);
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: -1px -1px white, 1px 1px white, 1px -1px white, -1px 1px white;
+}
+.time {
+  margin-left: 1rem;
+}
