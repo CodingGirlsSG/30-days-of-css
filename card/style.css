@@ -75,7 +75,7 @@ body {
   20% {
     transform: translateY(0);
   }
-  30%,
+  40%,
   50% {
     transform: translateY(1500px);
   }
