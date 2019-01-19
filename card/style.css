@@ -23,11 +23,15 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.4);
 }
 .card {
-  position: relative;
+  position: absolute;
   max-width: var(--w);
   color: white;
-  animation: flying 4s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  margin-top: -200px;
+  /* animation: flying 4s cubic-bezier(0.5, 0, 0.5, 1) infinite; */
+  animation: flying 1s cubic-bezier(0.6, 0, 1, 1) infinite;
+  animation-direction: alternate;
+  /* margin-top: -200px; */
+  top: calc(50% - 570px / 2);
+  left: calc(50% - 370px / 2);
 }
 .card .wrapper {
   padding: 4rem 2rem;
@@ -48,38 +52,45 @@ body {
 
 .shade-1,
 .shade-2 {
-  width: var(--w);
-  height: var(--h);
+  width: 370px;
+  height: 570px;
   position: absolute;
-  width: 100%;
-  height: 100%;
+
+  /* width: 100%; */
+  /* height: 100%; */
 }
 .shade-1 {
-  top: var(--gap);
-  left: var(--gap);
-  animation: flying 4s cubic-bezier(0.5, 0.1, 0.5, 0.9) infinite;
+  /* top: var(--gap); */
+  /* left: var(--gap); */
+
+  top: calc(50% - 570px / 2 + var(--gap));
+  left: calc(50% - 370px / 2 + var(--gap));
+  /* animation: flying 4s cubic-bezier(0.5, 0.1, 0.5, 0.9) infinite; */
+  animation: flying 1s cubic-bezier(0.3, 0, 1, 1) infinite;
+  animation-direction: alternate;
+
   background: var(--c1-color);
   z-index: -1;
 }
 .shade-2 {
-  top: calc(2 * var(--gap));
-  left: calc(2 * var(--gap));
-  animation: flying 4s cubic-bezier(0.5, 0.4, 0.5, 0.6) infinite;
+  /* top: calc(2 * var(--gap)); */
+  /* left: calc(2 * var(--gap)); */
+  top: calc(50% - 570px / 2 + var(--gap) * 2);
+  left: calc(50% - 370px / 2 + var(--gap) * 2);
+
+  /* animation: flying 4s cubic-bezier(0.5, 0.4, 0.5, 0.6) infinite; */
+  animation: flying 1s cubic-bezier(0.1, 0, 1, 1) infinite;
+  animation-direction: alternate;
+
   background: var(--c2-color);
   z-index: -2;
 }
 
 @keyframes flying {
-  0%,
-  20% {
+  0% {
     transform: translateY(0);
   }
-  30%,
-  50% {
-    transform: translateY(1500px);
-  }
-  70%,
   100% {
-    transform: translateY(0);
+    transform: translateY(1500px);
   }
 }
