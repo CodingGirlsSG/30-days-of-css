@@ -23,13 +23,11 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.4);
 }
 .card {
-  position: absolute;
+  position: relative;
   max-width: var(--w);
   color: white;
-  animation: flying 1s cubic-bezier(0.6, 0, 1, 1) infinite;
-  animation-direction: alternate;
-  top: calc(50% - 570px / 2);
-  left: calc(50% - 370px / 2);
+  animation: flying 4s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  margin-top: -200px;
 }
 .card .wrapper {
   padding: 4rem 2rem;
@@ -50,35 +48,39 @@ body {
 
 .shade-1,
 .shade-2 {
-  width: 370px;
-  height: 570px;
+  width: var(--w);
+  height: var(--h);
   position: absolute;
+  width: 100%;
+  height: 100%;
 }
 .shade-1 {
-  top: calc(50% - 570px / 2 + var(--gap));
-  left: calc(50% - 370px / 2 + var(--gap));
-  animation: flying 1s cubic-bezier(0.3, 0, 1, 1) infinite;
-  animation-direction: alternate;
-
+  top: var(--gap);
+  left: var(--gap);
+  animation: flying 4s cubic-bezier(0.5, 0.1, 0.5, 0.9) infinite;
   background: var(--c1-color);
   z-index: -1;
 }
 .shade-2 {
-  top: calc(50% - 570px / 2 + var(--gap) * 2);
-  left: calc(50% - 370px / 2 + var(--gap) * 2);
-
-  animation: flying 1s cubic-bezier(0.1, 0, 1, 1) infinite;
-  animation-direction: alternate;
-
+  top: calc(2 * var(--gap));
+  left: calc(2 * var(--gap));
+  /* animation: flying 4s ease-in-out infinite; */
+  animation: flying 4s cubic-bezier(0.5, 0.4, 0.5, 0.6) infinite;
   background: var(--c2-color);
   z-index: -2;
 }
 
 @keyframes flying {
-  0% {
+  0%,
+  20% {
     transform: translateY(0);
   }
-  100% {
+  30%,
+  50% {
     transform: translateY(1500px);
+  }
+  70%,
+  100% {
+    transform: translateY(0);
   }
 }
