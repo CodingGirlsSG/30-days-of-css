@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Sawarabi+Gothic");
+:root {
+  font-size: 16px;
+  --page-margin: 2rem;
+  --text-color: rgba(0, 0, 0, 0.8);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Sawarabi Gothic", sans-serif;
+}
+.layout {
+  width: calc(100vw - 2 * var(--page-margin));
+  height: calc(100vh - 2 * var(--page-margin));
+  padding: var(--page-margin);
+  background: #efefef;
+  overflow-y: scroll;
+}
+.entry {
+  display: grid;
+  grid-template-areas:
+    "side title ."
+    "side content .";
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 40rem 1fr;
+}
+.entry:not(:first-child) {
+  margin-top: 2rem;
+}
+.title,
+.content,
+.date {
+  background: white;
+}
+.title,
+.content {
+  font-size: 1.6rem;
+}
+.side {
+  grid-area: side;
+  text-align: right;
+}
+.date {
+  display: inline-block;
+  padding: 1rem;
+  color: var(--text-color);
+}
+.title {
+  grid-area: title;
+  color: #aaa;
+  padding: 1rem 1rem 0;
+}
+.title::before {
+  content: "“";
+  font-size: 6rem;
+  height: 6rem;
+  margin-right: 0.5rem;
+  color: #ccc;
+  float: left;
+  position: relative;
+  top: -10px;
+}
+.content {
+  grid-area: content;
+  padding: 2rem;
+  color: white;
+  border-bottom: 0.25rem solid currentColor;
+  transition: color ease 0.5s;
+}
+p {
+  margin: 0;
+  color: var(--text-color);
+}
+p:not(:first-child) {
+  margin-top: 1rem;
+}

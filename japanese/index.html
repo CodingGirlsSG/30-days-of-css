@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <div class="entry">
+        <div class="side"><div class="date">１月１２日</div></div>
+        <div class="title">
+          有名な人で会いたい人がいますか。どんなことを聞きたいですか。メールを書いてください。
+        </div>
+        <div class="content">
+          <p>司馬遼太郎様</p>
+          <p>
+            こんばんは。毎日寝る前に司馬遼太郎様の本を読みます。今日は「関ヶ原」を終わった、ずいぶんおもしろかったと思っているんですが、その本について司馬遼太郎様に聞きたいです。
+          </p>
+          <p>
+            関ヶ原の戦の結果は、石田三成様が負けたんですが、残念な気分を持っているですか。なぜ負けたんですか。石田三成様は仕事が上手だったけど、人をあまりわからないと思います。逆に徳川家康様は仕事とかstrategyとか医学も上手だったんです、素晴らしかったですね、西の方が勝つのは無理だと思います。
+          </p>
+          <p>
+            関ヶ原へ旅行に行きたいんですね。司馬遼太郎様は行くことがあるんですか。今古い戦場が見えているんですか。何かあるんですか。
+          </p>
+          <p>
+            私はお前様書いた本のなかで中国語に翻訳したのは全部て読みました。翻訳しなかったのはちょっと難しいんですが、簡単な本を二、三冊を書いていただけませんか。
+          </p>
+          <p>ガオウェイ</p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="side"><div class="date">１２月１９日</div></div>
+        <div class="title">
+          あなたのおじいさんやおばあさんを紹介してください
+        </div>
+        <div class="content">
+          <p>
+            私のおじいちゃんは８１歳です、おばあちゃんは８０歳です。おじいちゃんとおばあちゃんは一緒に住んでいます。おばあちゃんはおじいちゃんを「バガ」と呼びます、面白いと思います。
+          </p>
+          <p>
+            田舎に住んでいますから、広い庭があります。おばあちゃんは庭で野菜と動物を育てています。祝日のとき、家族はおじいちゃんとおばあちゃんのうちへ行きます。行った時、おじいちゃんはおばあちゃんが育てた鳥を殺して料理を作ってくれます。おばあちゃんは私に方言を話してくれます。おじいちゃんは私に彼氏ができてほしいです。おばあちゃんは「頭が良くて、心が良ければいい」と言いました。おばあちゃんはとてもかっこいいと思います。
+          </p>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const changeColor = () => {
+        const color =
+          "color: #" +
+          [1, 2, 3, 4, 5, 6]
+            // generates lighter color, add 8 to a random number between 0 and 8
+            .map(_ => "0123456789abcdef"[Math.floor(Math.random() * 8 + 8)])
+            .join("");
+        document.querySelectorAll(".content").forEach(entry => {
+          entry.style = color;
+        });
+      };
+      window.onload = changeColor;
+      // document.addEventListener("click", changeColor);
+    </script>
+  </body>
+</html>
