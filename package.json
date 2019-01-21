@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "gray-percentage": "^2.0.0",
+    "typography-plugin-code": "^0.16.18"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  }
+}

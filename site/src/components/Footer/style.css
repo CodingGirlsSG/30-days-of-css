@@ -1,9 +1,16 @@
 .footer {
+  position: fixed;
+  bottom: 2rem;
   display: flex;
   height: 2rem;
   justify-content: center;
   align-items: center;
 }
+.footer a {
+  border-bottom: unset;
+  padding-bottom: unset;
+}
 .footer img {
   height: 2rem;
+  margin-bottom: 0;
 }

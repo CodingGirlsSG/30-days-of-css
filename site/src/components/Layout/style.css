@@ -1,6 +1,21 @@
-@import './typography.css';
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: Roboto, sans-serif;
+}
+
+.layout__content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 a,
+h2 a,
+h3 a {
+  transition: all 0.2s ease-in;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover {
+  text-shadow: #dedede 0.1em 0.1em;
 }

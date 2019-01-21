@@ -3,6 +3,23 @@
   text-decoration: none;
   padding-bottom: 5px;
   border-bottom: 1px;
-  display: block;
-  text-align: center;
+  transition: all 0.2s ease-out;
+  margin-bottom: 2rem;
+  text-align: left;
+  position: relative;
+  height: 4rem;
+  /* border-bottom: 4px solid #ddd; */
+}
+.site-title::before {
+  content: '';
+  position: absolute;
+  width: calc(10%);
+  height: 1px;
+  left: 0;
+  top: 100%;
+  border-bottom: 4px solid #ddd;
+}
+.site-title a {
+  transition: all 0.2s ease;
+  border-bottom: 0;
 }

@@ -1,33 +1,62 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
-  return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
-    </div>
-  )
+import Intro from '../components/Intro'
+import Layout from '../components/Layout'
+import SEO from '../components/seo'
+
+class BlogPostTemplate extends React.Component {
+  render() {
+    const post = this.props.data.markdownRemark
+    const siteTitle = this.props.data.site.siteMetadata.title
+    const { previous, next } = this.props.pageContext
+
+    return (
+      <Layout location={this.props.location} title={siteTitle}>
+        <Intro />
+        <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <h1>{post.frontmatter.title}</h1>
+        <p>{post.frontmatter.date}</p>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+        {/* <ul>
+          <li>
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li>
+            {next && (
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title} →
+              </Link>
+            )}
+          </li>
+        </ul> */}
+      </Layout>
+    )
+  }
 }
 
+export default BlogPostTemplate
+
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      id
+      excerpt(pruneLength: 160)
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        path
         title
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
