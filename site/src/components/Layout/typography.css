@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Coiny');
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  font-size: 1rem;
+  font-family: Roboto, 'Open Sans', sans-serif;
+}
+header,
+footer,
+h1,
+h2,
+h3 {
+  font-family: Coiny, cursive;
+}
+
+h6 {
+  font-size: calc(1rem / 5);
+}
+h5 {
+  font-size: 12px; /* to avoid min font size issue with CH character */
+}
+/* h4 and others are default size */
+footer,
+h3 {
+  font-size: calc(8rem / 5);
+}
+h2 {
+  font-size: calc(13rem / 5);
+}
+h1 {
+  font-size: calc(21rem / 5);
+}

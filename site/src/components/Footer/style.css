@@ -1,0 +1,9 @@
+.footer {
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.footer img {
+  height: 2rem;
+}
