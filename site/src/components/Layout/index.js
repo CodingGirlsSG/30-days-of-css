@@ -23,8 +23,8 @@ const Layout = ({ children, location }) => (
             siteTitle={data.site.siteMetadata.title}
           />
           <div className="layout__content">{children}</div>
-          <Footer />
         </div>
+        <Footer />
       </>
     )}
   />

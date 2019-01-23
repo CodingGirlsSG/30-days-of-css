@@ -1,16 +1,18 @@
 .footer {
   position: fixed;
-  width: 80%;
-  max-width: 800px;
   bottom: 0;
   padding-bottom: 1rem;
-  background-image: linear-gradient(to bottom, transparent 0, white 100%);
+  background-image: linear-gradient(to bottom, transparent 0, white 70%);
+  width: 100vw;
 }
 .footer-text {
   font-family: Coiny, cursive;
 }
 
 .content {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
 }

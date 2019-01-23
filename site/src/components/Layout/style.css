@@ -11,7 +11,7 @@
   margin: 0 auto;
 }
 .layout__content {
-  padding-bottom: 4rem; /* footer height + footer margin bottom */
+  padding-bottom: 6rem; /* footer height + footer margin bottom */
 }
 
 p {

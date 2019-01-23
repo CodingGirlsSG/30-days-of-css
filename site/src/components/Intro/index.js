@@ -9,9 +9,10 @@ function Bio() {
         const { author, social } = data.site.siteMetadata
         return (
           <div className="intro">
-            Join a 30-day CSS challenge with <strong>{author}</strong>
-            {` `}
-            <a href={`https://twitter.com/${social.twitter}`}>@CodingGirls</a>
+            Join a 30-day CSS challenge with{' '}
+            <strong>
+              <a href={`https://twitter.com/${social.twitter}`}>@CodingGirls</a>
+            </strong>
           </div>
         )
       }}

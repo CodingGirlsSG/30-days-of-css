@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Coiny|Open+Sans&subset=latin-ext');
-
-* {
+@import url('https://fonts.googleapis.com/css?family=Coiny|Fira+Mono|Open+Sans&subset=latin-ext');
+:root {
   font-size: 16px;
+  line-height: 1.6;
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.6em;
+
+  --decor-color: #ddd;
+  --bg-hl: #f7f7f7;
+  --emphasis-spacing: 1.5rem;
 }
 
 h1,
 h2,
 h3,
 h4 {
+  line-height: 1.2;
   font-family: Coiny, cursive;
   margin: 2rem auto 1rem;
 }
@@ -24,6 +28,10 @@ h1 > a:hover,
 h2 > a:hover,
 h3 > a:hover {
   background: unset;
+}
+
+strong {
+  letter-spacing: 0.8px;
 }
 
 a {
@@ -69,4 +77,101 @@ p + p {
 
 li {
   margin: 0.5rem 0;
+}
+
+ul {
+  margin: var(--emphasis-spacing) 0;
+}
+
+ul li {
+  list-style: none;
+  position: relative;
+  margin: 0;
+}
+li + li {
+  margin-top: 0.7rem;
+}
+ul li::before {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--decor-color);
+  position: absolute;
+  left: calc(-1.5 * var(--emphasis-spacing));
+  top: calc((1.6rem - 1rem) * 0.5);
+}
+
+blockquote {
+  color: #222;
+  font-style: italic;
+  border-radius: 5px;
+  margin: var(--emphasis-spacing) calc(-1 * var(--emphasis-spacing));
+  padding: var(--emphasis-spacing);
+  position: relative;
+  font-size: 1.2rem;
+  color: #222;
+}
+blockquote p::before {
+  content: '“';
+  position: absolute;
+  font-family: Coiny, cursive;
+  font-size: 4rem;
+  height: 2rem;
+  color: var(--decor-color);
+  left: calc(-1.5 * var(--emphasis-spacing));
+  top: var(--emphasis-spacing);
+  line-height: 1;
+}
+
+/* syntax highlighting */
+
+code,
+pre,
+code > span {
+  font-family: 'Fira Mono', monospace;
+  background: var(--bg-hl);
+}
+
+p code.language-text,
+li code.language-text,
+blockquote code.language-text {
+  border-radius: 4px;
+  padding: 4px;
+  font-style: normal;
+}
+
+.gatsby-highlight {
+  position: relative;
+  background: var(--bg-hl);
+  border-radius: 5px;
+  padding: var(--emphasis-spacing);
+  margin: var(--emphasis-spacing) calc(-1 * var(--emphasis-spacing));
+  -webkit-overflow-scrolling: touch;
+}
+
+.gatsby-highlight pre[class*='language-']::before {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  text-align: right;
+  color: #777;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background: white;
+  box-shadow: #eee 2px 2px 0 2px;
+}
+
+.gatsby-highlight pre[class='language-javascript']::before {
+  content: 'js';
+}
+.gatsby-highlight pre[class='language-css']::before {
+  content: 'css';
+}
+.gatsby-highlight pre[class='language-html']::before {
+  content: 'html';
 }
