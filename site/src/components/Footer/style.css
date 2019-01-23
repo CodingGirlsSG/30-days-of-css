@@ -1,7 +1,7 @@
 .footer {
   position: fixed;
   bottom: 0;
-  padding: 2rem 0 1rem;
+  padding: 2rem 0 0.5rem;
   background-image: linear-gradient(to bottom, transparent 0, white 70%);
   width: 100vw;
 }
