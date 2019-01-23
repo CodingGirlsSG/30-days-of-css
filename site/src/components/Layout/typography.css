@@ -133,11 +133,12 @@ code > span {
   background: var(--bg-hl);
 }
 
+h1 code.language-text,
 p code.language-text,
 li code.language-text,
 blockquote code.language-text {
-  border-radius: 4px;
-  padding: 4px;
+  border-radius: 0.2em;
+  padding: 0.1em 0.4em;
   font-style: normal;
 }
 
