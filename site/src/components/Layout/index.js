@@ -17,14 +17,14 @@ const Layout = ({ children, location }) => (
     `}
     render={data => (
       <>
-        <div className="layout__content">
+        <div className="layout__main">
           <Header
             location={location}
             siteTitle={data.site.siteMetadata.title}
           />
-          {children}
-          <Footer />
+          <div className="layout__content">{children}</div>
         </div>
+        <Footer />
       </>
     )}
   />

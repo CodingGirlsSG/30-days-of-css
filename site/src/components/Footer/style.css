@@ -1,16 +1,21 @@
 .footer {
   position: fixed;
-  bottom: 2rem;
+  width: 80%;
+  left: 10%;
+  bottom: 0;
+  padding-bottom: 1rem;
+  background-image: linear-gradient(to bottom, transparent 0, white 100%);
+}
+
+.content {
   display: flex;
-  height: 2rem;
-  justify-content: center;
   align-items: center;
 }
-.footer a {
+.content a {
   border-bottom: unset;
   padding-bottom: unset;
 }
-.footer img {
+.content img {
   height: 2rem;
   margin-bottom: 0;
 }

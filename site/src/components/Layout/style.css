@@ -3,9 +3,16 @@
   padding: 0;
 }
 
-.layout__content {
+.layout__main {
   width: 80%;
   margin: 0 auto;
+}
+.layout__content {
+  padding-bottom: 4rem; /* footer height + footer margin bottom */
+}
+
+p {
+  line-height: 1.6;
 }
 
 h1 a,
