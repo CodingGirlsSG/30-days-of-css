@@ -1,5 +1,4 @@
 import React from 'react'
-import cx from 'classnames'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import './style.css'
