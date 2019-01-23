@@ -37,12 +37,6 @@ const _options = {
       'ul, ol': {
         marginTop: rhythm(options.blockMarginBottom),
       },
-      a: {
-        color: 'unset',
-        textDecoration: 'none',
-        paddingBottom: '2px',
-        borderBottom: '4px solid #ddd',
-      },
       h1: {
         ...scale(8 / 5),
       },

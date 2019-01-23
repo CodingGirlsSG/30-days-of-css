@@ -1,10 +1,13 @@
 .footer {
   position: fixed;
   width: 80%;
-  left: 10%;
+  max-width: 800px;
   bottom: 0;
   padding-bottom: 1rem;
   background-image: linear-gradient(to bottom, transparent 0, white 100%);
+}
+.footer-text {
+  font-family: Coiny, cursive;
 }
 
 .content {
@@ -17,5 +20,8 @@
 }
 .content img {
   height: 2rem;
-  margin-bottom: 0;
+  margin: 0 1rem;
+}
+.content a:hover {
+  background: transparent;
 }

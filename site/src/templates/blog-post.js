@@ -5,6 +5,8 @@ import Intro from '../components/Intro'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 
+import './style.css'
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -13,10 +15,10 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <Intro />
+        {/* <Intro /> */}
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
-        <p>{post.frontmatter.date}</p>
+        <p className="date">{post.frontmatter.date}</p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
         {/* <ul>

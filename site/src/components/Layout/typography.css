@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Coiny|Open+Sans&subset=latin-ext');
+
+* {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Coiny, cursive;
+  margin: 2rem auto 1rem;
+}
+
+h1 > a,
+h2 > a,
+h3 > a {
+  border: none;
+}
+
+h1 > a:hover,
+h2 > a:hover,
+h3 > a:hover {
+  background: unset;
+}
+
+a {
+  font-family: unset;
+  font-size: unset;
+  color: unset;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #ddd;
+  transition: all 0.2s ease;
+}
+a:hover {
+  border-color: #aaa;
+  border-width: 4px;
+  background: #eee;
+}
+
+h6 {
+  font-size: calc(3rem / 13);
+}
+
+h5 {
+  font-size: calc(5rem / 13);
+}
+
+h4 {
+  font-size: calc(8rem / 13);
+}
+
+h3 {
+  font-size: 1rem;
+}
+h2 {
+  font-size: calc(21rem / 13);
+}
+h1 {
+  font-size: calc(34rem / 13);
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+li {
+  margin: 0.5rem 0;
+}
