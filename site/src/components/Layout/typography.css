@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Coiny|Fira+Mono|Open+Sans&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Aleo:400i|Coiny|Fira+Mono|Open+Sans&subset=latin-ext');
+
 :root {
   font-size: 16px;
   line-height: 1.6;
   font-family: 'Open Sans', sans-serif;
 
-  --decor-color: #ddd;
+  --decor-color: #777;
   --bg-hl: #f7f7f7;
   --emphasis-spacing: 1.5rem;
 }
@@ -103,25 +104,16 @@ ul li::before {
 }
 
 blockquote {
-  color: #222;
+  color: var(--decor-color);
   font-style: italic;
-  border-radius: 5px;
   margin: var(--emphasis-spacing) calc(-1 * var(--emphasis-spacing));
-  padding: var(--emphasis-spacing);
+  padding: 0.5rem var(--emphasis-spacing);
   position: relative;
   font-size: 1.2rem;
-  color: #222;
+  border-left: 4px solid;
 }
-blockquote p::before {
-  content: '“';
-  position: absolute;
-  font-family: Coiny, cursive;
-  font-size: 4rem;
-  height: 2rem;
-  color: var(--decor-color);
-  left: calc(-1.5 * var(--emphasis-spacing));
-  top: var(--emphasis-spacing);
-  line-height: 1;
+blockquote p {
+  font-family: Aleo, serif;
 }
 
 /* syntax highlighting */
