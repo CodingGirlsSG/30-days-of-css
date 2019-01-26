@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "30-days-css-site",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "CodingGirls' #30DaysCCSS static site.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Wei Gao <wgao19@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/CodingGirlsSG/30-days-of-css/issues"
   },
   "dependencies": {
     "gatsby": "^2.0.76",
@@ -42,13 +42,14 @@
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
-    "gatsby"
+    "css",
+    "codinggirls"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/CodingGirlsSG/30-days-of-css.git"
   },
   "scripts": {
     "dev": "gatsby develop",
