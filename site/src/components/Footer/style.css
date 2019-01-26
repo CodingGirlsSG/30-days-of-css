@@ -1,0 +1,29 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding: 2rem 0 0.5rem;
+  background-image: linear-gradient(to bottom, transparent 0, white 70%);
+  width: 100vw;
+}
+.footer-text {
+  font-family: Coiny, cursive;
+}
+
+.content {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.content a {
+  border-bottom: unset;
+  padding-bottom: unset;
+}
+.content img {
+  height: 2rem;
+  margin: 0 1rem;
+}
+.content a:hover {
+  background: transparent;
+}

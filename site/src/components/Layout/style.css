@@ -1,0 +1,31 @@
+@import './typography.css';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.layout__main {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.layout__content {
+  padding-bottom: 6rem; /* footer height + footer margin bottom */
+}
+
+p {
+  line-height: 1.6;
+}
+
+h1 a,
+h2 a,
+h3 a {
+  transition: all 0.2s ease-in;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover {
+  text-shadow: #dedede 0.1em 0.1em;
+}
