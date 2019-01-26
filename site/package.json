@@ -1,7 +1,7 @@
 {
   "name": "30-days-css-site",
   "private": true,
-  "description": "CodingGirls' #30DaysCCSS static site.",
+  "description": "CodingGirls' #30DaysOfCSS static site.",
   "version": "0.1.0",
   "author": "Wei Gao <wgao19@gmail.com>",
   "bugs": {
