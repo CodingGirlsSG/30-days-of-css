@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from '../Header'
 import Footer from '../Footer'
+import 'coding-girls-typography'
 import './style.css'
 
 const Layout = ({ children, location }) => (
