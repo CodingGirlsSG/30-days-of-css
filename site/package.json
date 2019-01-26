@@ -62,6 +62,6 @@
     "start": "npm run develop",
     "build": "gatsby build",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "lerna bootstrap --include-filtered-dependencies && gatsby build --prefix-paths && gh-pages -d public"
   }
 }
