@@ -76,6 +76,10 @@ p + p {
   margin-top: 1em;
 }
 
+p > img {
+  max-width: 100%;
+}
+
 li {
   margin: 0.5rem 0;
 }
@@ -141,6 +145,10 @@ blockquote code.language-text {
   padding: var(--emphasis-spacing);
   margin: var(--emphasis-spacing) calc(-1 * var(--emphasis-spacing));
   -webkit-overflow-scrolling: touch;
+}
+
+.gatsby-highlight pre {
+  overflow-x: auto;
 }
 
 .gatsby-highlight pre[class*='language-']::before {
