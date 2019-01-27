@@ -2,6 +2,5 @@
   "name": "coding-girls-typography",
   "version": "0.0.1",
   "main": "typography.css",
-  "license": "MIT",
-  "private": true
+  "license": "MIT"
 }
