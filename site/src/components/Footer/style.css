@@ -9,6 +9,7 @@
   );
   width: 100vw;
 }
+
 .footer-text {
   font-family: Coiny, cursive;
 }
@@ -19,6 +20,16 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 455px) {
+  .content {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .content a {
+    align-self: flex-end;
+  }
 }
 .content a {
   border-bottom: unset;

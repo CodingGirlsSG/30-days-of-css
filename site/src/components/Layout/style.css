@@ -8,6 +8,11 @@
   max-width: 800px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 800px) {
+  .layout__main {
+    width: 90%;
+  }
+}
 .layout__content {
   padding-bottom: 6rem; /* footer height + footer margin bottom */
 }
