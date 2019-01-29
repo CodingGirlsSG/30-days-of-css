@@ -1,23 +1,23 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 
 function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author, social } = data.site.siteMetadata
+        const { author, social } = data.site.siteMetadata;
         return (
           <div className="intro">
             Join a 30-day CSS challenge with{' '}
-            <strong>
-              <a href={`https://twitter.com/${social.twitter}`}>@CodingGirls</a>
-            </strong>
+            <a href="http://codinggirls.sg/" target="_blank">
+              CodingGirls
+            </a>
           </div>
-        )
+        );
       }}
     />
-  )
+  );
 }
 
 const bioQuery = graphql`
@@ -38,6 +38,6 @@ const bioQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Bio
+export default Bio;
