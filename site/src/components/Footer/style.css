@@ -2,7 +2,11 @@
   position: fixed;
   bottom: 0;
   padding: 2rem 0 0.5rem;
-  background-image: linear-gradient(to bottom, transparent 0, white 70%);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0,
+    white 70%
+  );
   width: 100vw;
 }
 .footer-text {
