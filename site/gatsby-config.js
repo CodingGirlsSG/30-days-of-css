@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `30 Days of CSS`,
+    title: `30 Days of CSS Girls`,
     author: `CodingGirlsSG`,
     description: `Css with CodingGirls :)`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `http://css.codinggirls.sg/`,
     social: {
       twitter: `CodingGirls_SG`,
     },
