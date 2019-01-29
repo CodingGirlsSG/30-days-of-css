@@ -114,8 +114,9 @@ ul li::before {
 blockquote {
   color: var(--decor-color);
   font-style: italic;
-  margin: var(--block-text-spacing) calc(-1 * var(--block-text-spacing));
-  padding: 0.5rem var(--block-text-spacing);
+  margin: calc(2 * var(--block-text-spacing))
+    calc(-1 * var(--block-text-spacing));
+  padding: 0.2rem var(--block-text-spacing);
   position: relative;
   font-size: 1.2rem;
   border-left: 4px solid;
