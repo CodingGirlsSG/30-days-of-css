@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Aleo:400i|Coiny|Fira+Mono|Open+Sans&subset=latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Aleo:400i|Coiny|Fira+Mono|Open+Sans&subset=latin-ext");
 
 :root {
   font-size: 16px;
   line-height: 1.6;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 
   --decor-color: #777;
-  --bg-hl: #f7f7f7;
-  --emphasis-spacing: 1.5rem;
+  --bg-hl: #fafafa;
+  --block-text-spacing: 0.625rem;
+  --list-spacing: 1rem;
 }
 
 h1,
@@ -75,6 +76,9 @@ h1 {
 p + p {
   margin-top: 1em;
 }
+p {
+  line-height: 2;
+}
 
 p > img {
   max-width: 100%;
@@ -85,7 +89,7 @@ li {
 }
 
 ul {
-  margin: var(--emphasis-spacing) 0;
+  margin: var(--block-text-spacing) 0;
 }
 
 ul li {
@@ -97,21 +101,21 @@ li + li {
   margin-top: 0.7rem;
 }
 ul li::before {
-  content: '';
+  content: "";
   width: 1rem;
   height: 0.5rem;
   border-radius: 0.5rem;
   background: var(--decor-color);
   position: absolute;
-  left: calc(-1.5 * var(--emphasis-spacing));
+  left: calc(-1.5 * 1.6 * var(--list-spacing));
   top: calc((1.6rem - 1rem + 0.5rem) * 0.5);
 }
 
 blockquote {
   color: var(--decor-color);
   font-style: italic;
-  margin: var(--emphasis-spacing) calc(-1 * var(--emphasis-spacing));
-  padding: 0.5rem var(--emphasis-spacing);
+  margin: var(--block-text-spacing) calc(-1 * var(--block-text-spacing));
+  padding: 0.5rem var(--block-text-spacing);
   position: relative;
   font-size: 1.2rem;
   border-left: 4px solid;
@@ -125,7 +129,7 @@ blockquote p {
 code,
 pre,
 code > span {
-  font-family: 'Fira Mono', monospace;
+  font-family: "Fira Mono", monospace;
   background: var(--bg-hl);
 }
 
@@ -138,20 +142,7 @@ blockquote code.language-text {
   font-style: normal;
 }
 
-.gatsby-highlight {
-  position: relative;
-  background: var(--bg-hl);
-  border-radius: 5px;
-  padding: var(--emphasis-spacing);
-  margin: var(--emphasis-spacing) calc(-1 * var(--emphasis-spacing));
-  -webkit-overflow-scrolling: touch;
-}
-
-.gatsby-highlight pre {
-  overflow-x: auto;
-}
-
-.gatsby-highlight pre[class*='language-']::before {
+pre[class*="language-"]::before {
   position: absolute;
   top: 1em;
   right: 1em;
@@ -167,12 +158,96 @@ blockquote code.language-text {
   box-shadow: #eee 2px 2px 0 2px;
 }
 
-.gatsby-highlight pre[class='language-javascript']::before {
-  content: 'js';
+.gatsby-highlight pre[class="language-javascript"]::before {
+  content: "js";
 }
-.gatsby-highlight pre[class='language-css']::before {
-  content: 'css';
+.gatsby-highlight pre[class="language-css"]::before {
+  content: "css";
 }
-.gatsby-highlight pre[class='language-html']::before {
-  content: 'html';
+.gatsby-highlight pre[class="language-html"]::before {
+  content: "html";
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  position: relative;
+  background: var(--bg-hl);
+  border-radius: 5px;
+  -webkit-overflow-scrolling: touch;
+}
+
+pre[class*="language-"] {
+  overflow: auto;
+  padding: var(--block-text-spacing) calc(1.5 * var(--block-text-spacing));
+  margin: var(--block-text-spacing) calc(-1.5 * var(--block-text-spacing));
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999;
+  font-weight: 200;
+}
+
+.token.punctuation {
+  color: #999;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #627;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #762;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: hsla(0, 0%, 100%, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #627;
+}
+
+.token.function {
+  color: #267;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
 }
