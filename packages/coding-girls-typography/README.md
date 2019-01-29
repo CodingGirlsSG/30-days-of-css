@@ -1,6 +1,6 @@
-# Coding Girls (Typography)
+# Coding Girls (Theme)
 
-Typography used by the Coding Girls' [#30DaysOfCSSGirls](https://twitter.com/search?f=tweets&q=%2330DaysOfCSSGirls) static site.
+Typography used by the Coding Girls' [#30DaysOfCSSGirls](http://css.codinggirls.sg/) gatsby static site.
 
 ## Theme
 
