@@ -1,6 +1,6 @@
 ---
 title: 'Day 2: Specs Reading: CSS Snapshot 2018 (Overview)'
-date: '2019-02-07'
+date: '2019-02-01'
 ---
 
 # Specs Reading: CSS Snapshot 2018
