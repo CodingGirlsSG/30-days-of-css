@@ -1,9 +1,9 @@
 ---
-title: 'Specs Reading: CSS Snapshot 2018 (Overview)'
+title: 'Day 2: Specs Reading: CSS Snapshot 2018 (Overview)'
 date: '2019-02-07'
 ---
 
-# Specs Reading: CSS Snapshot 2018 (Overview)
+# Specs Reading: CSS Snapshot 2018
 
 Welcome to the first day of CSS specs reading.
 

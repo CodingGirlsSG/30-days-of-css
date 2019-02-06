@@ -1,5 +1,5 @@
 ---
-title: 'I Heart You, Coding Girls'
+title: 'Day 1: I Heart You, Coding Girls'
 date: '2019-01-29'
 ---
 
