@@ -1,6 +1,6 @@
 ---
 title: 'Day 1: I Heart You, Coding Girls'
-date: '2019-01-29'
+date: '2019-02-20'
 ---
 
 # I Heart You, Coding Girls
