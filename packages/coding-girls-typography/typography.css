@@ -143,6 +143,12 @@ blockquote code.language-text {
   font-style: normal;
 }
 
+p > img {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
 pre[class*="language-"]::before {
   position: absolute;
   top: 1em;
