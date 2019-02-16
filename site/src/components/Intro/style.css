@@ -1,0 +1,15 @@
+.sign-up-link:not(:last-child)::after {
+  margin: 0 0.5rem;
+  content: '❤';
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  color: #ccc;
+  cursor: default;
+  pointer-events: none;
+}
+
+.sign-up-link:not(:last-child) {
+  position: relative;
+  margin-right: 2rem;
+}
