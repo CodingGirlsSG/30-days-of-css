@@ -15,6 +15,7 @@ module.exports = {
         website: 'http://wgao19.cc',
         twitter: 'wgao19',
         github: 'wgao19',
+        codepen: 'wgao19',
         intro: `Hi I'm Wei 👩🏻‍🌾 I've been tutoring my classmates since college, where we had a study center with a philosophy that asked us tutors to "share our process of learning". I hope to be learning together with everyone through this CSS challenge!`,
       },
       {

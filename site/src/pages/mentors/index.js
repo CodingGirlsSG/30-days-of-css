@@ -45,10 +45,23 @@ class Mentors extends React.Component {
                     <a
                       target="_blank"
                       href={`https://github.com/${mentor.github}`}
+                      className="logo-link"
                     >
                       <img
                         width="16"
                         src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg"
+                      />
+                    </a>
+                  )}
+                  {mentor.codepen && (
+                    <a
+                      target="_blank"
+                      href={`https://codepen.io/${mentor.codepen}`}
+                      className="logo-link"
+                    >
+                      <img
+                        width="16"
+                        src="http://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png"
                       />
                     </a>
                   )}
@@ -77,6 +90,7 @@ export const pageQuery = graphql`
           intro
           twitter
           github
+          codepen
         }
       }
     }
