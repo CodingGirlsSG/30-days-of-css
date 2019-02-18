@@ -12,7 +12,7 @@ module.exports = {
         name: 'Wei Gao',
         avatar:
           'https://media.licdn.com/dms/image/C4D03AQE1ZtbaVvpxKQ/profile-displayphoto-shrink_200_200/0?e=1556150400&v=beta&t=0ocx5tLdHDcwq8mug9vumu4xIk7uoy4d9L7QMo26Ols',
-        website: 'http://wgao19.cc',
+        website: 'http://dev.wgao19.cc',
         twitter: 'wgao19',
         github: 'wgao19',
         codepen: 'wgao19',
