@@ -28,13 +28,6 @@ At end of the 30 days, there will be a lucky one to be selected to win a ticket 
 - **creativity:** Yes we have provided a sample for you to play around, but it will up to you to do you own variations and have fun with CSS
 - **give back:** Have you helped by answering questions from your peers? Or sharing your thoughts and feedback to your peers and mentors?
 
-## Meet Your Mentors
-
-[Gao Wei](https://wgao19.cc/)
-[Chen Hui Jing](https://www.chenhuijing.com/)
-[Micheal Cheng](https://www.linkedin.com/in/miccheng/?originalSubdomain=sg)
-Jennie Ji
-
 ## Reads
 
 Every other day we'll slow down on coding and take time to read CSS specifications.

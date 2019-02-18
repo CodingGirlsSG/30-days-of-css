@@ -1,0 +1,53 @@
+.mentors {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+}
+.mentor-intro {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mentor-profile {
+  margin: 0.5rem 0;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+.name-link {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.mentor-profile a {
+  color: #777;
+  border-bottom: none;
+}
+.mentor-profile a:first-child::after {
+  margin: 0 0.5rem;
+  content: '❤';
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  color: #ccc;
+  cursor: default;
+  pointer-events: none;
+}
+
+.mentor-profile a:first-child {
+  position: relative;
+  margin-right: 2rem;
+}
+
+.logo-link {
+  margin-right: 0.25rem;
+}
+
+.avatar {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  grid-column: 1;
+}

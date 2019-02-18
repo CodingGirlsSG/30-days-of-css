@@ -7,6 +7,37 @@ module.exports = {
     social: {
       twitter: `CodingGirls_SG`,
     },
+    mentors: [
+      {
+        name: 'Wei Gao',
+        avatar:
+          'https://media.licdn.com/dms/image/C4D03AQE1ZtbaVvpxKQ/profile-displayphoto-shrink_200_200/0?e=1556150400&v=beta&t=0ocx5tLdHDcwq8mug9vumu4xIk7uoy4d9L7QMo26Ols',
+        website: 'http://wgao19.cc',
+        twitter: 'wgao19',
+        github: 'wgao19',
+        intro: `Hi I'm Wei 👩🏻‍🌾 I've been tutoring my classmates since college, where we had a study center with a philosophy that asked us tutors to "share our process of learning". I hope to be learning together with everyone through this CSS challenge!`,
+      },
+      {
+        name: 'Chen Hui Jing',
+        avatar: 'https://www.chenhuijing.com/assets/images/headshot@2x.jpg',
+        website: 'https://www.chenhuijing.com',
+        twitter: 'hj_chen',
+        github: 'huijing',
+        intro: `Hello! I'm Hui Jing, a front-end designer and developer who believes HTML and CSS are the foundation of the web.`,
+      },
+      {
+        name: 'Michael Cheng',
+        avatar:
+          'https://media.licdn.com/dms/image/C5103AQFSIZxd47grCA/profile-displayphoto-shrink_800_800/0?e=1556150400&v=beta&t=l4Fl0FN6p5GHKQ8PHPeOY1Y_rcB7vzoyNkw4_ed4an0',
+        website: 'https://www.linkedin.com/in/miccheng/?originalSubdomain=sg',
+      },
+      {
+        name: 'Jennie Ji',
+        github: 'JennieJi',
+        website: 'http://jennieji.github.io/',
+        avatar: 'https://avatars3.githubusercontent.com/u/1913045?s=460&v=4',
+      },
+    ],
   },
   plugins: [
     {

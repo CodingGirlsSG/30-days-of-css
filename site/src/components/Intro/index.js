@@ -32,6 +32,9 @@ function Bio() {
               >
                 Challenge Collection
               </a>
+              <a href="/mentors" className="sign-up-link">
+                Meet Our Mentors
+              </a>
             </div>
           </>
         );
