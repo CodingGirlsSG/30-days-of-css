@@ -20,12 +20,16 @@ Original design: [Favorites](https://dribbble.com/shots/5574342--044-Favorites) 
 
 ## Reading
 
-We've been creating hearts using pseudo-elements for three challenges now. Let's read a bit into that today.
+[Box Model](https://www.w3.org/TR/CSS2/box.html#box-model) and [Visual Formatting Model](https://www.w3.org/TR/CSS2/visuren.html).
 
-- [Pseudo-Elements Module Level 4](https://www.w3.org/TR/css-pseudo-4/)
+(Chapters 8 and 9 of [Cascading Style Sheets Level 2](https://www.w3.org/TR/CSS2/))
+
+Chapter 9 is a bit crazy, but very rewarding to read. Please be patient with it :)
 
 ### Questions
 
-- What is the difference between pseudo-element selectors and pseudo-selectors?
-- What are three types of pseudo-element selectors?
-- What is the criterion for pseudo-element selectors to show up?
+- What are _content box_, _margin box_, _border box_, _padding box_, respectively?
+- What is _collapsing margin_ and what would you do to avoid it?
+- What are _containing blocks_, _block-level elements_, and _block boxes_?
+- What are _positioned elements_?
+- Explain "normal flow" :)

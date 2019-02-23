@@ -22,6 +22,8 @@ Note a few changes:
 
 - [Introduction to CSS 2.1](https://www.w3.org/TR/CSS2/intro.html)
 
+(Chapter 2 of [Cascading Style Sheets Level 2](https://www.w3.org/TR/CSS2/))
+
 ### Questions
 
 - What are the ways to include stylesheets to webpages?

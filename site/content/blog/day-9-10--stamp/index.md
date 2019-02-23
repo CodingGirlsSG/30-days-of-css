@@ -28,4 +28,12 @@ Image credit goes to [Kawaii Gameboy](https://dribbble.com/shots/3314912-Kawaii-
 
 ## Reading
 
-<!-- TODO: Add reading for day 10 -->
+We've been creating hearts using pseudo-elements for three challenges now. Let's read a bit into that today.
+
+- [Pseudo-Elements Module Level 4](https://www.w3.org/TR/css-pseudo-4/)
+
+### Questions
+
+- What is the difference between pseudo-element selectors and pseudo-selectors?
+- What are three types of pseudo-element selectors?
+- What is the criterion for pseudo-element selectors to show up?
