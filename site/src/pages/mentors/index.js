@@ -22,13 +22,17 @@ class Mentors extends React.Component {
               <img src={mentor.avatar} className="avatar" />
               <div className="mentor-intro">
                 <span className="mentor-profile">
-                  <a
-                    href={mentor.website}
-                    target="_blank"
-                    className="name-link"
-                  >
-                    {mentor.name}
-                  </a>
+                  {mentor.website ? (
+                    <a
+                      href={mentor.website}
+                      target="_blank"
+                      className="mentor-name"
+                    >
+                      {mentor.name}
+                    </a>
+                  ) : (
+                    <span className="mentor-name">{mentor.name}</span>
+                  )}
                   {mentor.twitter && (
                     <a
                       target="_blank"

@@ -17,15 +17,17 @@
   align-items: center;
   line-height: 1;
 }
-.name-link {
+.mentor-name {
   font-size: 1.2rem;
   font-weight: 700;
 }
-.mentor-profile a {
+.mentor-profile a,
+.mentor-profile span {
   color: #777;
   border-bottom: none;
 }
-.mentor-profile a:first-child::after {
+.mentor-profile a:first-child::after,
+.mentor-profile span:first-child::after {
   margin: 0 0.5rem;
   content: '❤';
   position: absolute;
@@ -36,7 +38,8 @@
   pointer-events: none;
 }
 
-.mentor-profile a:first-child {
+.mentor-profile a:first-child,
+.mentor-profile span:first-child {
   position: relative;
   margin-right: 2rem;
 }

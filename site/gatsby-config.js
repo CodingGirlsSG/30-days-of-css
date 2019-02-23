@@ -36,7 +36,12 @@ module.exports = {
         name: 'Jennie Ji',
         github: 'JennieJi',
         website: 'http://jennieji.github.io/',
-        avatar: 'https://avatars3.githubusercontent.com/u/1913045?s=460&v=4',
+      },
+      {
+        name: 'Tuongvan Nguyen',
+        github: 'SmokinClove',
+        codepen: 'tvan',
+        avatar: 'https://s.cdpn.io/profiles/user/2786268/512.jpg?1550824290',
       },
     ],
   },
