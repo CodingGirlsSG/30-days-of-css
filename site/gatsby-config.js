@@ -36,6 +36,8 @@ module.exports = {
         name: 'Jennie Ji',
         github: 'JennieJi',
         avatar: 'https://avatars3.githubusercontent.com/u/1913045?s=460&v=4',
+        codepen: 'jennieji',
+        intro: `Hi, this is Jennie, a front-end "girl" who started from CSS + HTML years ago and going towards full stack.`,
       },
       {
         name: 'Tuongvan Nguyen',
