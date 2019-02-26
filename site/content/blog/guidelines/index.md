@@ -11,7 +11,7 @@ We'll publish a challenge on alternate days with our sample provided on [Codepen
 
 **Daily Checklist**
 
-- Create your [Codepen](http://codepen.io) add to our collection [30 Days of CSS Girls](https://codepen.io/collection/XmwwGK/)[(](https://codepen.io/collection/XmwwGK/)Showroom)[.](https://codepen.io/collection/XmwwGK/)
+- Create your [Codepen](http://codepen.io) and tag [#30DaysOfCSSGirls](https://codepen.io/tag/30DaysOfCSSGirls).
 - If you're implementing someone else's design, kindly give a reference to the original design. You may do so in your CodePen's description or comment in the code.
 - Feel free to tweet and share your project to the world and tag [#30DaysOfCSSGirls](https://twitter.com/search?f=tweets&q=%2330DaysOfCSSGirls).
 - Every other day, we will select a best project to be featured on CodingGirls Facebook Page
