@@ -1,4 +1,7 @@
-.sign-up-link:not(:last-child)::after {
+.intro-links {
+  margin-top: 1rem;
+}
+.intro-link:not(:last-child)::after {
   margin: 0 0.5rem;
   content: '❤';
   position: absolute;
@@ -9,7 +12,11 @@
   pointer-events: none;
 }
 
-.sign-up-link:not(:last-child) {
+.intro-link:not(:last-child) {
   position: relative;
   margin-right: 2rem;
+}
+
+.logo-link {
+  border-bottom: none;
 }
