@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/seo';
-import './style.css';
 
 class Mentors extends React.Component {
   render() {
