@@ -46,6 +46,27 @@ module.exports = {
         avatar: 'https://s.cdpn.io/profiles/user/2786268/512.jpg?1550824290',
       },
     ],
+    topics: [
+      {
+        subject: 'CSS Specifications',
+        notes: [
+          {
+            author: 'tae',
+            author_link: '',
+            link:
+              'https://gist.github.com/Ta2Rim/d1babcd51fd1c13f63cb8567e55b5b7f',
+            title: 'Specs Reading: CSS Snapshot 2018',
+          },
+          {
+            author: 'swiftystar4',
+            author_link: 'https://swiftystar13.wordpress.com/',
+            link:
+              'https://swiftystar13.wordpress.com/2019/02/26/day-2-css-snapshot-2018/',
+            title: 'Understanding about CSS Snapshot',
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     {

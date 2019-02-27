@@ -24,6 +24,9 @@ function Bio() {
             >
               Show Room
             </a>
+            <a href="/study-notes" className="intro-link">
+              Study Notes
+            </a>
             <a href="/mentors" className="intro-link">
               Meet Our Mentors
             </a>
