@@ -66,6 +66,25 @@ module.exports = {
           },
         ],
       },
+      {
+        subject: 'CSS 2.1',
+        notes: [
+          {
+            author: 'terim',
+            author_link: 'https://github.com/Ta2Rim',
+            link:
+              'https://gist.github.com/Ta2Rim/8df3a47d3f50530e39d3c845c58f2ee9',
+            title: 'Reading introduction to CSS 2.1',
+          },
+          {
+            author: 'swiftystar4',
+            author_link: 'https://swiftystar13.wordpress.com/',
+            link:
+              'https://gist.github.com/swiftystar4/7cbbab56387f05665acf697a76ab98d2',
+            title: 'CSS 2.1',
+          },
+        ],
+      },
     ],
   },
   plugins: [
