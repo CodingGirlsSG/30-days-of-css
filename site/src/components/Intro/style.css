@@ -1,5 +1,7 @@
 .intro-links {
   margin-top: 1rem;
+  display: flex;
+  align-items: center;
 }
 .intro-link:not(:last-child)::after {
   margin: 0 0.5rem;
@@ -19,4 +21,5 @@
 
 .logo-link {
   border-bottom: none;
+  margin-right: 0.25rem;
 }
