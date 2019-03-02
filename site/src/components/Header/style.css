@@ -7,7 +7,6 @@
   margin-bottom: 2rem;
   text-align: left;
   position: relative;
-  height: 4rem;
   /* border-bottom: 4px solid #ddd; */
 }
 .site-title::before {

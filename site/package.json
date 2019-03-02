@@ -1,5 +1,5 @@
 {
-  "name": "30-days-css-site",
+  "name": "site",
   "private": true,
   "description": "CodingGirls' #30DaysOfCSS static site.",
   "version": "0.1.0",
@@ -8,6 +8,7 @@
     "url": "https://github.com/CodingGirlsSG/30-days-of-css/issues"
   },
   "dependencies": {
+    "coding-girls-typography": "0.2.0",
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.22",
     "gatsby-plugin-feed": "^2.0.8",
@@ -61,6 +62,6 @@
     "start": "npm run develop",
     "build": "gatsby build",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "lerna bootstrap --include-filtered-dependencies && gatsby build --prefix-paths && gh-pages -d public"
   }
 }

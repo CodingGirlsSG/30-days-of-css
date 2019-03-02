@@ -2,9 +2,14 @@
   position: fixed;
   bottom: 0;
   padding: 2rem 0 0.5rem;
-  background-image: linear-gradient(to bottom, transparent 0, white 70%);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0,
+    white 70%
+  );
   width: 100vw;
 }
+
 .footer-text {
   font-family: Coiny, cursive;
 }
@@ -15,6 +20,16 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 455px) {
+  .content {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .content a {
+    align-self: flex-end;
+  }
 }
 .content a {
   border-bottom: unset;
