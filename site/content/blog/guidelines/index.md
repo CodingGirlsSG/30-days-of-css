@@ -1,6 +1,6 @@
 ---
 title: Guidelines
-date: 2019-01-19
+date: '2019-01-19'
 ---
 
 # Guidelines
