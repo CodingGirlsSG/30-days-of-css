@@ -6,18 +6,20 @@ date: '2019-03-03'
 # Seeing the Limit of Drawing with CSS
 
 I was trying to implement this design [this design, Nintendo Switch](https://dribbble.com/shots/3348456-Nintendo-Switch) by [Louie Mantia](https://dribbble.com/mantia).
-From time to time I'd hit a boundary and realize that CSS is not intended for drawing.
-But the attempts are still fun.
+
+A few questions came up
+
+- How do you draw the intersection near the handhelds?
+- Do I really need to draw so many `<div>`s for the control buttons?
+- How to draw the curled boundary of the heart?
 
 ![](https://cdn.dribbble.com/users/763/screenshots/3348456/switch.png)
 
-Is it possible to draw with CSS?
+In short.... are they even possible?
 
 ## Objectives
 
-Turns out you can resemble it fairly nicely without too much hassle.
-So please give it a try.
-Give the curled heart a try, too.
+That Nintendo Switch design is so beautiful you shall not move your eyes away from it until you get it :P
 
 [Just a hint](https://codepen.io/wgao19/pen/vvZoQW), as always.
 
