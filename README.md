@@ -29,8 +29,8 @@ site/content/blog/notes-${title_of_your_notes}/index.md
 
 ```
 ---
-title: Hello, Coding Girls (and Guys)!
-date: '2019-01-19'
+title: 'Study Notes: Title of My Notes'
+date: '2019-02-28'
 ---
 ```
 
