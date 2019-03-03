@@ -20,6 +20,8 @@ It was a lot of fun, though.
 So please give it a try.
 Give the heart a try, too.
 
+[Just a hint](https://codepen.io/wgao19/pen/vvZoQW), as always.
+
 ## Reading
 
 [CSS Selectors](https://drafts.csswg.org/css2/selector.html)
