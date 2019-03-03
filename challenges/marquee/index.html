@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <script>
+      var marquee;
+      function append() {
+        marquee = document.createElement("marquee");
+        marquee.scrollDelay = 60;
+        marquee.direction = "up";
+        marquee.loop = 1;
+        marquee.style =
+          "margin: " +
+          Math.floor(Math.random() * document.documentElement.clientWidth) +
+          "px " +
+          Math.floor(
+            Math.random() * document.documentElement.clientHeight - 300
+          ) +
+          "px auto auto";
+        var bubble = document.createElement("div");
+        bubble.className = "bubble";
+        marquee.appendChild(bubble);
+        document.body.appendChild(marquee);
+      }
+      function remove() {
+        document.body.removeChild(marquee);
+      }
+
+      append();
+      setInterval(() => {
+        remove();
+        const timer = setTimeout(() => {
+          append();
+          clearTimeout(timer);
+        }, 2000);
+      }, 7000);
+    </script>
+  </body>
+</html>
