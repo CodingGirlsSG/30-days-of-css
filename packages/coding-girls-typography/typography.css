@@ -80,10 +80,6 @@ p {
   line-height: 2;
 }
 
-p > img {
-  max-width: 100%;
-}
-
 li {
   margin: 0.5rem 0;
 }
@@ -144,7 +140,7 @@ blockquote code.language-text {
 }
 
 p > img {
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto;
   display: block;
 }
