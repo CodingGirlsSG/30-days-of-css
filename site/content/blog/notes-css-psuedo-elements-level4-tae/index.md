@@ -51,11 +51,11 @@ that's little bit long spec.......... but finally I've done reading this!!
 - pseudo-elements represent the portion of a doucment that has been selected as the target or object of some possible future user-agent operations.
 - _Authors wanting multiple selections styles should use `root::selection` for their document-wide selection style. because `::selection` alone applies to every element in the tree ('\*' is implied when a tag selector is missing)_
 
-\*\*`::spelling-error`
+**`::spelling-error`**
 
 - pseudo-element represents a portion of text that has been flagged by the user agent as misspelled.
 
-\*\*`::grammer-error`
+**`::grammer-error`**
 
 - pseudo-element represnets a portion of text that has been flagged by the user agent as grammatically incorrect.
 
@@ -67,35 +67,35 @@ Tree-abiding pseudo-elements always fit within the box tree. They inherit any in
 
 - As with the content of regular elements, the generated content of `::before` and `::after` pseudo-elements may be included in any `::first-line` and `::first-letter` pseudo-elements applied to its _originating element_
 
-\*\*`::marker`
+**`::marker`**
 
 - The `::marker` pseudo-element represents the automatically generated marker box of a list item. In further CSS, list-item property will be deprecated. only `::marker` properties are allowed.
 
-\*\*`::placeholder`
+**`::placeholder`**
 
 ### Specific implementation of CSS Object Model
 
 The _`CSSPseudoElement`_ interface allows pseudo-elements to be event targets.
 
 ```
-  [Exposed=Window]
-  interface CSSPseudoElement : EventTarget {
-    readonly attribute CSSOMString type;
-    readonly attribute Element element;
-  }
+[Exposed=Window]
+interface CSSPseudoElement : EventTarget {
+  readonly attribute CSSOMString type;
+  readonly attribute Element element;
+}
 ```
 
 ### Addition to the Element interface
 
 ```
-  partial interface Element {
-    CSSPseudoElement? pseudo(CSSOMString type)
-  };
+partial interface Element {
+  CSSPseudoElement? pseudo(CSSOMString type)
+};
 ```
 
 opposite side
 
-### _Compatibility Syntax_
+### Compatibility Syntax
 
 For compatibility with existing style sheets written agianst CSS Level 2, UA must also accept the previous one-colon notation. (`:before`, `:after`, `:first-letter`, `first-line`) for the `::before`, `::after`, `::first-letter`, and `::first-line` pseudo-elements
 
