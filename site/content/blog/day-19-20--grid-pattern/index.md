@@ -1,6 +1,6 @@
 ---
 title: 'Days 19 ~ 20: Grid Patterns'
-date: '2019-03-15'
+date: '2019-03-18'
 ---
 
 # Wafu

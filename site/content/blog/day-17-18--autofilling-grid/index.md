@@ -1,6 +1,6 @@
 ---
 title: 'Days 17 ~ 18: Cards'
-date: '2019-03-13'
+date: '2019-03-15'
 ---
 
 # Cards
