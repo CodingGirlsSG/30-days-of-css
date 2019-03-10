@@ -1,0 +1,214 @@
+# Understanding about CSS Image Values and Replaced Content - #30DaysofCSSGirls
+
+## CSS Images Values
+
+### Images Values: _Images_ Type
+
+- 2D Images
+- URL References
+- Image Notation
+- Gradient Notation
+
+> `<image> = <url> | <image-list> | <element-reference> | <gradient>`
+
+#### Invalid Image 
+
+- E.g. URL redirect to a resource is not found at original URL given
+- Rendered as a solid-colour 'transparent' image with no right dimensions
+- Special Behaviour in some contents e.g. 'image ()' notation
+
+### Images References and Slices: _'url'_ type and notation
+
+- Indicate an images to reference an image file by URL
+- Solution: _'url' notation_ 
+> `background-image: url(test.png);`
+
+#### Invalid Image
+
+- UA cannot download and parse the display of the contents at the URL as an image
+
+### Images Fallbacks and Annotations: _'image()'_ notation
+
+- Use media fragments to clip out a portion of an images
+- Specify fallback images in case of the preferred image can't be decoded or image's type hard to recognize
+- Use a solid colour as an image
+- Annotate an image with right URL's links
+
+> `<image-list> = image( [ <image-decl> , ]* [ <image-decl> | <color> ] )
+<image-decl> = [ <url> | <string> | <element-reference> ]`
+
+#### Image Fragments
+
+- URL specified in 'image()' represents a portion of a resource that portion is clipped out its content and being a standalone image
+- Support the ‘image()’ notation must support the _xywh=#,#,#,#_ form of media fragment identifiers for images specified via ‘image()’
+
+> `background-image: url('swirl.png'); /* old code */`
+> `background-image: image('sprites.png#xywh=10,30,60,20'); /* new code */`
+
+#### Image Fallbacks
+
+- Specify a _'color'_ or _'background_image'_ to ensure adequate contrast of the images display
+- _'color'_ represents a solid-color image of the given color with no intrinsic dimensions
+- _'image-dec'_ and fallback colour provided not enough to cause invalid image
+
+> `background-image: image("test.svg", 'test.png' , "test.gif");`
+
+- Render SVG Image, PNG Image returns Error 404 and GIF will be used first
+
+> `body      { color: black; background: white; }`
+> `p.special { color: white; background: url("dark.png") black; }`
+
+- Ensure that text is still can readable when the images failed to load
+
+> `body      { color: black; background: white; }`
+> `p.special { color: white; background: image("dark.png", black); }`
+
+- Ensure that background colour is still can ensure that white text is readable
+
+#### Solid-Colour Images
+
+- Specify only a color without URLs, the function immediately falls back to represent a solid-color image of the chosen color
+> `background-image: image(rgba(0,0,255,.5)), url("bg-image.png");`
+
+### Gradient
+
+- Image that smoothly fades from one colour to another colour
+- Subtle Shading in background images, buttons, etc
+
+>`<gradient> = [  <linear-gradient> | <radial-gradient> | 
+	<repeating-linear-gradient> | <repeating-radial-gradient> ]`
+
+- Design into a box with dimensions of the gradient box
+
+#### Linear Gradients: _'linear-gradient()'_ notation
+
+- Create by specifying a gradient line and some of colour placed along the line
+
+- Image is constructed by creating an infinite canvas
+- Paint images with lines perpendicular to the gradient line
+- With the colour of the painted line being the colour of the gradient line where the two intersect
+
+- Produce a smooth fade from first colour to next and progress of the specified direction
+
+> `<linear-gradient> = linear-gradient(
+	[ [ <angle> | to <side-or-corner> ] ,]? 
+	<color-stop>[, <color-stop>]+)
+<side-or-corner> = [left | right] || [top | bottom]`
+
+##### Gradient Line
+- Gives Gradient a direction and determine how colour-stops are positioned. (Default: _'to bottom'_)
+
+- Directon:
+- Using Angles
+- Using Keywords
+
+#### Linear Gradients: _'radial-gradient()'_ notation
+
+>`<radial-gradient> = radial-gradient(
+  [ [ <shape> || <size> ] [ at <position> ]? , |
+    at <position>, ]?
+  <color-stop> [ , <color-stop> ]+
+)`
+
+##### Radial Gradient's Agruments
+
+- _'position'_
+- Determines the center of the gradient
+
+- _'shape'_
+- Determines whether ending shape is a either 'circle' or 'ellipse'
+
+- _'size'_
+- Determines the size of the gradient's ending shape
+
+  - _'closest-side'_
+  - Exactly meets the side of the gradient box closest to the gradient's center
+  
+  - _'farthest-side'_
+  - Same meaning as _'closest-side'_ but based on the farthest side(s)
+  
+  - _'closest-corner'_
+  - Pass through the corner of the gradient box closest to the gradient's center
+  
+  - _'farthest-corner'_
+  - Same meaning as _'closest-corner'_ but based on the farthest corner
+  
+  - _'length'_
+  - Radius of the circle
+  
+  - _'length| percentage > x'_
+  - Radius of the circle in more detail
+  
+##### Radial Gradient's Colour Stops Location
+
+- Placed on a **gradient ray** and similar to the gradient line of linear gradients
+- **Gradient Ray** is anchored at the center of the gradient and extends towards the right
+- 0% location is at the start of the **gradient ray**
+- 100% location is on the point where the **gradient ray** intersects the ending shape
+- Placed on a negative location; though the negative region of the gradient ray is never directly consulted for rendering
+- Affected the color of non-negative locations on the gradient ray through interpolation or repetition (see repeating gradients)
+  
+##### Degenerate Radial Gradient
+
+- Some combinations of position, size and shape produce a circle or ellipse with a radius of 0
+
+**If the ending shape is a circle with zero radius:**
+- Render as if the ending shape was a _circle_ whose _radius_ was an arbitray very small number > 0
+
+**If the ending shape has zero width (regardless of height):**
+- Render as if the ending shape was an _ellipse_ whose _height_ was an arbitrary was an very large number and _width_ was an arbitray very small number > 0
+
+**If the ending shape is a zero height:**
+- Render as if the ending shape was an _ellipse_ whose _width_ was an arbitrary was an very large number and _height_ was an arbitray very small number > 0
+
+#### Repeating Gradients: _'repeating-linear-gradient()'_ and _'repeating-radius-gradient()'_ notation
+- Render Color-Stops are repeated infinitely in both directions
+- Positions shifted by multiples of the difference between the last specified color-stop's position and the first specified color-stop's position
+- Last color-stop and First color-stop coincide at the boundaries of each group which produce sharp transitions if the gradient doesn't start and end with the same color
+
+**If the distance between the first and last color-stops is non-zero:**
+- Physical resolution of the output device is insufficient to render the gradient
+- Find the average colour of the gradient
+- Render the gradient as a solid-colour image equal to the average colour
+
+**If the distance between the first and last color-stops is zero:**
+- Average colour of a gradient with same number and colour of colour-stops
+- First and Last Colour-Stop have an arbitrary non-zero distance apart and remaining colour-stops equally spaced between them
+- Render the gradient as a solid-color image equal to that average colour
+
+**If the height of a repeating radial gradient is zero:**
+- Physical resolution of the output device is insufficient to faithfully render the 
+- Find the average color of the gradient
+- Render the gradient as a solid-color image equal to the average color
+
+**To find the average color of a gradient, follow the steps:**
+
+1. Define list as an initially-empty list of premultiplied RGBA colors, 
+   and total-length as the distance between first and last color stops.
+2. For each adjacent pair of color-stops, define weight as half the distance between the two color-stops, 
+   divided by total-length. Add two entries to list, the first obtained by representing the color of the 
+   first color-stop in premultiplied sRGBA and scaling all of the components by weight,
+   and the second obtained in the same way with the second color-stop.
+3. Sum the entries of list component-wise to produce the average color, and return it.
+
+#### Gradient Colour-Stops
+
+> `<color-stop> = <color> [ <percentage> | <length> ]?`
+
+- Points placed along the line defined by the gradient line at the beginning of the rule
+- Colour-Stops must be specified in order for the location
+- % refer to the length of the gradient line and measurement from starting to ending point
+- 0% - starting point | 100% - ending point
+- Placed between the starting, ending point and any position on the line
+
+**All color-stops have definite position in ascending order, follow the steps:**
+
+1. If the _first color-stop_ does not have a position, set its position to _0%_. 
+   If the _last color-stop_ does not have a position, set its position to _100%_.
+2. If a color-stop has a _position_ that is less than the _specified position of any color-stop_ before it inside list, 
+   set its position to be _equal to the largest specified position of any color-stop before it_.
+3. If any color-stop _didn't any position_ for each run of _adjacent color-stops without positions_, 
+   set their positions  to be  _evenly spaced between the preceding and following color-stops with positions_.  
+  
+- ## References:
+https://www.w3.org/TR/css3-images/
