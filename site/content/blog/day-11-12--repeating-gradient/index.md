@@ -19,6 +19,8 @@ Original design: [DCX - Hypnotic Background](https://dribbble.com/shots/2859124-
 
 [Just in case you need a hint](https://codepen.io/wgao19/pen/pqpmgK).
 
+https://codepen.io/wgao19/pen/pqpmgK
+
 ## Reading
 
 [CSS Image Values and Replaced Content Level 3](https://www.w3.org/TR/css3-images/)

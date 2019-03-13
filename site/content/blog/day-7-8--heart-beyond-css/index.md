@@ -23,6 +23,8 @@ That Nintendo Switch design is so beautiful you shall not move your eyes away fr
 
 [Just a hint](https://codepen.io/wgao19/pen/vvZoQW), as always.
 
+https://codepen.io/wgao19/pen/vvZoQW
+
 ## Reading
 
 [CSS Selectors](https://drafts.csswg.org/css2/selector.html)
