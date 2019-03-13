@@ -1,6 +1,6 @@
 ---
 title: 'Days 25 ~ 26: Bézier Curves'
-date: '2019-03-21'
+date: '2019-03-25'
 ---
 
 # Bézier Curves
