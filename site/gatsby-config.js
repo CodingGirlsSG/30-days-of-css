@@ -147,6 +147,20 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+      {
+        resolve: 'gatsby-transformer-remark',
+        options: {
+          plugins: [
+            {
+              resolve:'@weknow/gatsby-remark-codepen',
+              options: {
+                theme: 'dark',
+                height: 400
+              }
+            }
+          ]
+        }
+      }
   ],
   pathPrefix: '/site',
 };

@@ -10,7 +10,7 @@ And I thought, what would a ticket designed for The Wave look like?
 
 Shamelessly squeeze in [design of mine for a movie ticket here](https://codepen.io/wgao19/pen/pqmVMg).
 
-![](https://i.imgur.com/Zdv7hVe.png)
+https://codepen.io/wgao19/pen/pqmVMg
 
 ## Objective
 

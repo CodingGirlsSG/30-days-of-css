@@ -10,6 +10,8 @@ date: '2019-02-27'
 Let's deepen our knowledge about implementing the heart.
 We'll work on a slightly different heart icon, like [this](https://codepen.io/wgao19/pen/qLrvaB).
 
+https://codepen.io/wgao19/pen/qLrvaB
+
 Note a few changes:
 
 - The heart is now white on a colored background

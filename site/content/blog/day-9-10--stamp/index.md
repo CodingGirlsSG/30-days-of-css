@@ -29,7 +29,7 @@ And what about [a coupon](https://dribbble.com/search?q=coupon) (most of the the
 
 Turn one of your favorite images to a stamp, like [this](https://codepen.io/wgao19/pen/vvrbeP).
 
-![](https://i.imgur.com/oCHhvkz.png)
+https://codepen.io/wgao19/pen/vvrbeP
 
 Image credit goes to [Kawaii Gameboy](https://dribbble.com/shots/3314912-Kawaii-Gameboy) by [Jordan Jenkins](https://dribbble.com/jkane).
 
