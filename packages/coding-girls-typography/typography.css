@@ -80,10 +80,6 @@ p {
   line-height: 2;
 }
 
-p > img {
-  max-width: 100%;
-}
-
 li {
   margin: 0.5rem 0;
 }
@@ -114,15 +110,15 @@ ul li::before {
 blockquote {
   color: var(--decor-color);
   font-style: italic;
-  margin: calc(2 * var(--block-text-spacing))
-    calc(-1 * var(--block-text-spacing));
-  padding: 0.2rem var(--block-text-spacing);
+  margin: 0;
+  padding: 0.2rem calc(2 * var(--block-text-spacing));
   position: relative;
   font-size: 1.2rem;
   border-left: 4px solid;
 }
 blockquote p {
   font-family: Aleo, serif;
+  margin: 0.5rem;
 }
 
 /* syntax highlighting */
@@ -144,7 +140,7 @@ blockquote code.language-text {
 }
 
 p > img {
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto;
   display: block;
 }

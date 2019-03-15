@@ -1,6 +1,6 @@
 ---
 title: 'Days 15 ~ 16: CSS Grid'
-date: '2019-03-11'
+date: '2019-03-13'
 ---
 
 # Design Principles, CSS Grid
