@@ -16,6 +16,8 @@ Today let's create a page layout with grid.
 
 I've created mine [here](https://codepen.io/wgao19/pen/jXgbPy), a minimalist practice book for my Japanese studies. And yes, I've made it to [a website](https://japanese.wgao19.cc/).
 
+https://codepen.io/wgao19/pen/jXgbPy
+
 Please share with us yours :)
 
 ## Reading

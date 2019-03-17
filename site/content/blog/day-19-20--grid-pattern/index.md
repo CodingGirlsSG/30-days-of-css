@@ -22,6 +22,8 @@ If you don't want the hassle of looking -- try the wafu above （╹◡╹）
 
 [Just a hint](https://codepen.io/wgao19/pen/WLYvqV), as always.
 
+https://codepen.io/wgao19/pen/WLYvqV
+
 _Spoiler: the math part is real fun._
 
 ## Reading

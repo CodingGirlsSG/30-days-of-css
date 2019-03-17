@@ -1,6 +1,6 @@
 ---
 title: 'Days 23 ~ 24: Water Wave'
-date: '2019-03-22'
+date: '2019-03-25'
 ---
 
 # Water Wave
@@ -16,7 +16,9 @@ Implement the animation for [Hypnotic Background](https://dribbble.com/shots/285
 
 Original design: [DCX - Hypnotic Background](https://dribbble.com/shots/2859124-DCX-Hypnotic-Background) by [Nick DiMatteo](https://dribbble.com/ndimatteo).
 
-[Not easy eh!](https://codepen.io/wgao19/pen/XoyLpp) But super fun.
+https://codepen.io/wgao19/pen/XoyLpp
+
+Not easy eh! But super fun.
 
 ## Reading
 
