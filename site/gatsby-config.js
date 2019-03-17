@@ -107,6 +107,13 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: '@weknow/gatsby-remark-codepen',
+            options: {
+              theme: 'dark',
+              height: 400,
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
@@ -118,7 +125,12 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+            },
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
@@ -147,20 +159,6 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-      {
-        resolve: 'gatsby-transformer-remark',
-        options: {
-          plugins: [
-            {
-              resolve:'@weknow/gatsby-remark-codepen',
-              options: {
-                theme: 'dark',
-                height: 400
-              }
-            }
-          ]
-        }
-      }
   ],
   pathPrefix: '/site',
 };
