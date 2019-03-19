@@ -86,7 +86,7 @@ The display value of a grid item is blockified: if the specified display of an i
 ### Grid Item Sizing
 Grid item calculations for auto widths and heights vary by their self-alignment values:
 | alignment |	Non-replaced Element Size	| Replaced Element Size	 |
-|:--------|:--------|:-------|
+|:--------|:--------|:--------|
 | `normal` | Fill grid area |  Use intrinsic size |
 | `stretch` | Fill grid area | Fill grid area |
 | `start`,`center`,etc | 'fit-content' sizing (like floats) | Use intrinsic size |
