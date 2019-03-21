@@ -1,6 +1,6 @@
 ---
-title: 'Days 27 ~ 28: Bézier Curves'
-date: '2019-03-27'
+title: 'Days 29 ~ 30: Bézier Curves'
+date: '2019-03-29'
 ---
 
 # Bézier Curves

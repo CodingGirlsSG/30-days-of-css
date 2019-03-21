@@ -1,6 +1,6 @@
 ---
-title: 'Days 23 - 24: Flex Item Width'
-date: '2019-03-22'
+title: 'Days 25 - 26: Flex Item Width'
+date: '2019-03-25'
 ---
 
 # Flexbox Item Width
@@ -31,4 +31,4 @@ https://codepen.io/wgao19/pen/BbxMJg
 
 ## Reading
 
-[Flexible Box Module 1](https://www.w3.org/TR/css-flexbox-1/), sections 1 - 6
+[Flexible Box Module 1](https://www.w3.org/TR/css-flexbox-1/), sections 7 - 8

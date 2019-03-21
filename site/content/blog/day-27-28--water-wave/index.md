@@ -1,6 +1,6 @@
 ---
-title: 'Days 23 ~ 24: Water Wave'
-date: '2019-03-25'
+title: 'Days 27 ~ 28: Water Wave'
+date: '2019-03-27'
 ---
 
 # Water Wave
