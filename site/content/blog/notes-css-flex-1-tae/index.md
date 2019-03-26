@@ -6,7 +6,7 @@ date: '2019-03-21'
 Original post by [tae](https://github.com/Ta2Rim): [Reading CSS Flex Layout Module 1 - Chapter 1\~6](https://gist.github.com/Ta2Rim/706c3151ddc576f44d9e49d9272a050a)
 
 
-#TIL - Reading CSS Flex Layout Module 1 - Chapter 1~6
+# TIL - Reading CSS Flex Layout Module 1 - Chapter 1~6
 
 ## Overview
 In return Flex Layout gains simple and powerful tools for distributing space and aligning content in ways that web apps and complex web pages often need.
@@ -80,7 +80,7 @@ these 3 suggestions used in this calculation account for the relevant min/max/pr
 
 
 ## Ordering and Orientation
-*** WARNING : Authors must not use order or the `*-reverse` values of `flex-flow`/`flex-direction` as a substitute for correct source ordering, as that can ruin the accessibility of the document. ***
+***WARNING : Authors must not use order or the `*-reverse` values of `flex-flow`/`flex-direction` as a substitute for correct source ordering, as that can ruin the accessibility of the document. ***
 
 ### Flex Flow Direction: the flex-direction property
 - Name:	flex-direction
@@ -96,8 +96,7 @@ The flex-wrap property controls whether the flex container is single-line or mul
 - Name:	flex-flow
 - Value:	<‘flex-direction’> || <‘flex-wrap’>
 
-**
-note that `flex-flow` directions are writing mode sensitive 
+**note that `flex-flow` directions are writing mode sensitive 
 ![image](https://user-images.githubusercontent.com/41318449/54882188-d4955f80-4e9a-11e9-9a21-fca42f3e1d0f.png)
 **
 
