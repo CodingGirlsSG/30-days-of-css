@@ -1,5 +1,5 @@
 ---
-title: 'Study Notes: Reading CSS Transitions Level 1 - Chapter 7~8'
+title: 'Study Notes: Reading CSS Transitions Level 1'
 date: '2019-03-27'
 ---
 
